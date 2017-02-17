@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%=t'Invoices'%></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th width=50%><%= sortable "at_date" %> </th>
+      <th><%= t"at_emission_date_current" %> </th>
+      <th><%= t"Actual_reading" %> </th>
+      <th><%= t"Previous_reading" %> </th>
+      <th><%= t"Consume" %> </th>
+      <th>CEB - <%= t"Electricity" %> </th>
+      <th>SIA - <%= t"Water" %> </th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+     <%= render @invoices %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to t('New_Invoice'), new_invoice_path, class: "btn btn-primary" %>

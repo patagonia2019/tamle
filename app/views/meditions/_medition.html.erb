@@ -1,0 +1,19 @@
+<tr>
+  <td>
+    <% if medition.billed %>
+      <div class="billed"/> 
+    <% else %>
+      <div class="not_billed"/> 
+    <% end %>
+  </td>
+  <td><%= User.find(medition.user_id).name %></td>
+  <td><%= medition.at_date %></td>
+  <td class="amount"><%= medition.measure %> m3</td>
+
+  <% if is_admin? %>
+      <td><%= link_to t('Edit'), edit_medition_path(medition), class: "btn btn-success" %></td>
+      <td><%= link_to t('Destroy'), medition, class: "btn btn-danger", method: :delete, data: { confirm: t('Are_you_sure') } %></td>
+  <% end %>
+
+</tr>
+

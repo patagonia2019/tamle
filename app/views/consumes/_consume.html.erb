@@ -1,0 +1,16 @@
+<tr>
+  <td><%= consume.at_date.strftime("%b-%Y") %></td>
+  <td class="amount"><%= number_to_currency(consume.water_fix_consume_amount, unit: "$", format:"%u %n", precision:0) %>
+  <td class="amount"><%= number_to_currency(consume.water_provision_amount, unit: "$", format:"%u %n", precision:0) %>
+  <td class="amount"><%= consume.exceedance_m3 %> m3</td>
+  <td class="amount"><%= number_to_currency(consume.exceedance_m3_amount, unit: "$", format:"%u %n", precision:2) %>
+  <td class="amount"><%= number_to_currency(consume.social_quote_amount, unit: "$", format:"%u %n", precision:2) %>
+  <td class="amount"><%= consume.number_of_members %> </td>
+
+  <% if is_admin? %>
+      <td><%= link_to t('Edit'), edit_consume_path(consume), class: "btn btn-success" %></td>
+      <td><%= link_to t('Destroy'), consume, class: "btn btn-danger", method: :delete, data: { confirm: t('Are_you_sure') } %></td>
+  <% end %>
+
+</tr>
+

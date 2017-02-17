@@ -1,0 +1,1 @@
+json.array! @meditions, partial: 'meditions/medition', as: :medition

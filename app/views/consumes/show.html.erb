@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%=t("at_date")%>:</strong>
+  <%= @consume.at_date %>
+</p>
+
+<p>
+  <strong><%= t"water_fix_consume_amount" %>:</strong>
+  <%= number_to_currency(@consume.water_fix_consume_amount, unit: "$", format:"%u %n", precision:2) %>
+</p>
+
+<p>
+  <strong><%= t'water_provision_amount' %> :</strong>
+  <%= number_to_currency(@consume.water_provision_amount, unit: "$", format:"%u %n", precision:2) %>
+</p>
+
+<p>
+  <strong><%= t'exceedance_m3' %>:</strong>
+  <%= @consume.exceedance_m3 %> m3
+</p>
+
+<p>
+  <strong><%= t'exceedance_m3_amount' %>:</strong>
+  <%= number_to_currency(@consume.exceedance_m3_amount, unit: "$", format:"%u %n", precision:2) %>
+</p>
+
+<p>
+  <strong><%= t'social_quote_amount' %>:</strong>
+  <%= number_to_currency(@consume.social_quote_amount, unit: "$", format:"%u %n", precision:2) %>
+</p>
+
+<p>
+  <strong><%= t'number_of_members' %>:</strong>
+  <%= @consume.number_of_members %> 
+</p>
+
+
+<% if current_user.admin? %>
+  <%= link_to t('Edit'), edit_consume_path(@consume), class: "btn btn-success" %> |
+<% end %>
+<%= link_to t('Back'), consumes_path, class: "btn btn-default" %>

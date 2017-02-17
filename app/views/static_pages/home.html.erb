@@ -1,0 +1,92 @@
+<div class="center jumbotron">
+
+  <table>
+    <thead>
+      <tr>
+        <th colspan="6"> <%= full_title() %> Media Manzana 420 - (Rancho Grande) - Bariloche </th>
+      </tr>
+    <tbody>
+      <tr>
+        <td class="td-right"></td>
+    </tbody>
+      <tr>
+        <th colspan="6"> <%= t('Transactions') %> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="td-right"><%=t('credit')%> </td> <td width=30%> <b><%=transactionPagosSumWithCurrency()%> </b></td>
+        <td class="td-right"><%=t('debit')%> </td> <td width=30%> <b><%=transactionCobrosSumWithCurrency()%> </b></td>
+        <td class="td-right"><%=t('Balance')%> </td> <td width=30%> <b><%=transactionBalanceWithCurrency()%></td>
+      </tr>
+      <tr>
+      </tr>
+    </tbody>
+    <thead>
+      <tr>
+        <th colspan="6"> <%= t('Water_consumption') %> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+	      <td colspan="6" align=center> <%= t"General_water_consumption_meter" %> </td> 
+      </tr>
+      <tr>
+	      <td colspan="2" class="td-right"> <%= t"Last_emission"%> </td> <td width=30%> <b> <%=meditionLastEmission()%> </b> </td> <td colspan="3" width=30%>  </td>
+      </tr>
+      <tr>
+	      <td colspan="2" class="td-right"> <%= t"Previous_reading"%> </td> <td width=30%> <b> <%=meditionPrev(meditionCurrentDate()).at_date%> </b> </td> <td colspan="3" width=30%> <b> <%=meditionPrev(meditionCurrentDate()).measure%> m3 </b> </td>
+      </tr>
+      <tr>
+	      <td colspan="2" class="td-right"> <%= t"Actual_reading"%> </td> <td width=30%> <b> <%=meditionCurrentDate()%> </b> </td> <td colspan="3" width=30%> <b> <%=meditionByDate(meditionCurrentDate()).measure%> m3 </b> </td>
+      </tr>
+      <tr>
+	      <td colspan="3" class="td-right"> <%=t"Total_consumption"%> </td> <td colspan="3" width=30%> <b> <%= meditionByDate(meditionCurrentDate()).measure - meditionPrev(meditionCurrentDate()).measure %> m3 </b> </td>
+      </tr>
+    </tbody>
+    <thead>
+      <tr>
+        <th colspan="6"> <%= t('Invoices') %> </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+	      <td colspan="6" align=center> SIA - <%= t"Water" %> </td> 
+      </tr>
+      <tr>
+	      <td colspan="2" class="td-right"> <%= t"at_date"%> </td> <td width=30%> <b> <%=transactionCurrentMonthYear()%> </b> </td> <td colspan="3" width=30%>  </td>
+      </tr>
+      <tr>
+	     <td colspan="2" class="td-right"> <%= t"Fixed_consumption"%> </td>  <td colspan="3" width=30%> <b> <%= consumeWaterFixConsumeAmountWithCurrency() %> </b> </td>
+      </tr>
+      <tr>
+	     <td colspan="2" class="td-right"> <%= t"Water_supply_Fund"%> </td> <td colspan="3" width=30%> <b> <%=consumeWaterProvisionAmountWithCurrency()%> </b> </td>
+      </tr>
+      <tr>
+	      <td colspan="2" class="td-right"> <%=t"Total"%> </td> <td colspan="3" width=30%> <b> <%= consumeTotalAmountWithCurrency() %> </b> </td>
+      </tr>
+      <tr>
+	      <td colspan="2" class="td-right"> <%=t"Rates_per_m3_excess"%> </td> <td colspan="3" width=30%> <b>  
+	<b>$8.6/m3.</b> <%=t"Increased_water_consumption"%> <%= consumeInfo().exceedance_m3 %> m3. (<%=consumeInfo().exceedance_m3%> m3 / <%= consumeInfo().number_of_members %> <%=t"users"%> = <%= consumeUserExceedance() %> m3)			
+</b> </td>
+      </tr>
+
+
+      <tr>
+	      <td colspan="6" text-align=center> CEB - <%= t"Electricity" %> </td> 
+      </tr>
+      <tr>
+	      <td colspan="2" class="td-right"> <%= t"at_date"%> </td> <td width=30%> <b> <%=transactionCebMonthYear(meditionCurrentDate()) %> </b> </td> <td colspan="3" width=30%>  </td>
+      </tr>
+      <tr>
+	     <td colspan="2" width=30% class="td-right"> <%= t'Last_invoice' %> </td> <td colspan="3" width=30%> <b> <%= transactionCurrentCebInvoiceAmountWithCurrency(meditionCurrentDate()) %> </b> </td>
+      </tr>
+      <tr>
+	      <td colspan="2" width=30%> <%=t"Social_Fee"%> (Media Manzana 420) </td> <td colspan="3" width=30%> <b> <%= consumeSocialQuoteWithCurrency() %> </b><td colspan="3" width=30%>  </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<%= link_to image_tag("rails.png", alt: "Rails logo"), 'http://rubyonrails.org/' %>

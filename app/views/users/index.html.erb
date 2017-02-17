@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%=t("Users")%></h1>
+
+<%= will_paginate %>
+
+<table style="border: 1px; width: 100%">
+  <thead>
+    <tr>
+      <th>Gravatar</th>
+      <th><%=t("name")%></th>
+      <th><%=t("Email")%></th>
+      <th><%=t("address")%></th>
+      <th><%=t("catastro")%></th>
+      <th><%=t("phone")%>/<%=t("mobile")%></th>
+      <th width="30%"><%=t("Last_Paid")%></th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody style="width:100%">
+     <%= render @users %>
+  </tbody>
+</table>
+
+<br>
+
+<%= will_paginate %>
+
+
+<% if is_admin? %>
+   <%= link_to t('New_User'), new_user_path, class: "btn btn-primary"%>
+<% end %>
+

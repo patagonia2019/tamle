@@ -1,0 +1,913 @@
+    1  sudo locale-gen en_US
+    2  ls
+    3  ls -a
+    4  sudo apt-get update
+    5  sudo apt-get install curl
+    6  gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+    7  \curl -sSL https://get.rvm.io | bash
+    8  \curl -L https://get.rvm.io | bash -s stable --ruby
+    9  rvm get stable --autolibs=enable
+   10  sudo apt-get install ruby-rvm
+   11  rvm get stable --autolibs=enable
+   12  rvm install ruby
+   13  rvm --default use ruby-2.3.1
+   14  rvm install ruby
+   15  rpm list known
+   16  set -o vi
+   17  rvm list known
+   18  \curl -sSL https://get.rvm.io | bash -s stable --ruby
+   19  sudo apt-get --purge remove ruby-rvm
+   20  sudo rm -rf /usr/share/ruby-rvm /etc/rvmrc /etc/profile.d/rvm.sh
+   21  \curl -L https://get.rvm.io |    bash -s stable --ruby --autolibs=enable --auto-dotfiles
+   22  rvm reinstall ruby-2.3.0
+   23  \curl -sSL https://get.rvm.io | bash -s stable --ruby
+   24  source /home/vagrant/.rvm/scripts/rvm
+   25  rvm install ruby
+   26  ruby -v
+   27  rvm --default use ruby-2.3.1
+   28  rvm install ruby-2.3.1
+   29  rvm --default use ruby-2.3.1
+   30  sudo apt-get install nodejs
+   31  gem -v
+   32  gem update --system
+   33  rvm gemset list
+   34  rvm gemset use global
+   35  gem list
+   36  echo "gem: --no-document" >> ~/.gemrc
+   37  gem install bundler
+   38  gem install nokogiri
+   39  rvm use ruby-2.3.1@rails5.0 --create
+   40  gem install rails
+   41  rails -v
+   42  mkdir workspace
+   43  cd workspace/
+   44  mkdir myapp
+   45  cd myapp/
+   46  rvm use ruby-2.3.1@myapp --ruby-version --create
+   47  ls
+   48  gem install rails
+   49  rails new .
+   50  rails server
+   51  rails server -h
+   52  rails server -b 192.168.2.9
+   53  ifconfig
+   54  ls
+   55  cd workspace/
+   56  ls
+   57  cd myapp/
+   58  rails server -b 192.168.2.9
+   59  ifconfig
+   60  rails server -b 192.168.2.16
+   61  ls
+   62  ls
+   63  cd workspace/
+   64  ls
+   65  cd myapp/
+   66  ls
+   67  ls -l
+   68  cd app/controllers
+   69  ls
+   70  ls -l
+   71  mvim application_controller.rb 
+   72  vim application_controller.rb 
+   73  do apt-get install vim
+   74  set -o vi
+   75  vi application_controller.rb 
+   76  cd ..
+   77  ls
+   78  cd config/
+   79  ls
+   80  vim routes.rb 
+   81  vi routes.rb 
+   82  cd -
+   83  ls
+   84  vi app/controllers/application_controller.rb 
+   85  pwd
+   86  cd ..
+   87  ls
+   88  ls -l
+   89  ls
+   90  pwd
+   91  cd ..
+   92  ls
+   93  pwd
+   94  ls
+   95  tar cf workspace.tar workspace
+   96  ls
+   97  ls workspace
+   98  mount
+   99  cd workspace/
+  100  ls -l
+  101  cd
+  102  mount
+  103  df -h
+  104  cd workspace/
+  105  ls -l
+  106  tar xf ../workspace.tar .
+  107  tar xf ../workspace.tar 
+  108  ls
+  109  mv workspace/* .
+  110  rmdir workspace
+  111  ls
+  112  cd myapp/
+  113  ls
+  114  set -o vi
+  115  rails server -b 192.168.2.16
+  116  ls
+  117  cd ../Tamle-rails/
+  118  ls
+  119  rails _5.0.0.1_ new tamle_app
+  120  ls
+  121  source /home/vagrant/.rvm/scripts/rvm
+  122  rails _5.0.0.1_ new tamle_app
+  123  pwd
+  124  cd ..
+  125  ls -a
+  126  rails _5.0.0.1_ new a
+  127  ls
+  128  ps -ef
+  129  ps -ef|grep db
+  130  ps -ef|grep mysql
+  131  ps -ef|grep sql
+  132  ps -ef|grep mongo
+  133  ps -ef|grep -i spring
+  134  git status
+  135  cd w
+  136  ls
+  137  cd workspace/
+  138  ls
+  139  cd Tamle-rails/
+  140  ls
+  141  rvm use ruby-2.3.1@tamle --ruby-version --create
+  142  ls
+  143  gem install rails
+  144  rails new .
+  145  gem install rails
+  146  bundle install
+  147  set -o vi
+  148  rails server -b 192.168.2.16
+  149  git status
+  150  pwd
+  151  ls -a
+  152  ls
+  153  rails generate scaffold move name:string email:string 
+  154  rails db:migrate
+  155  rails server -b 192.168.2.16
+  156  history
+  157  rails generate scaffold Movement user_id:integer at_date:date month:integer year:integer concept:string amount:double
+  158  rails server -b 192.168.2.16
+  159  rails db:migrate
+  160  rails generate scaffold Movement user_id:integer at_date:date month:integer year:integer concept:string amount:decimal
+  161  rails generate scaffold Movement user_id:integer at_date:date month:integer year:integer concept:string amount:decimal --force
+  162  rails db:migrate
+  163  rails server -b 192.168.2.16
+  164  rails db:migrate
+  165  rails generate scaffold --help
+  166  rails generate migration add_sdebe_to_Movements isdebe:boolean
+  167  more db/migrate/20161024214802_add_sdebe_to_movements.rb
+  168  rails db:migrate
+  169  ls
+  170  rails server -b 192.168.2.16
+  171  rails generate migration add_isdebe_to_movement isdebe:boolean
+  172  cat db/migrate/20161024214928_add_isdebe_to_movement.rb
+  173  rails db:migrate
+  174  rm db/migrate/20161024214928_add_isdebe_to_movement.rb
+  175  rails db:migrate
+  176  rails server -b 192.168.2.16
+  177  rails generate migration add_ishaber_id_to_movement fieldname:ishaber
+  178  rails db:migrate
+  179  rails server -b 192.168.2.16
+  180  rails generate migration add_haber_to_movement haber:boolean
+  181  rails server -b 192.168.2.16
+  182  rails db:migrate
+  183  rails server -b 192.168.2.16
+  184  rails generate migration add_haber_to_movements haber:boolean
+  185  rails db:migrate
+  186  rails generate migration add_iscredit_to_movements iscredit:boolean
+  187  rails db:migrate
+  188  ls db/migrate/20161024214928_add_isdebe_to_movement.rb
+  189  ls db/migrate/201610242*_add*
+  190  rm db/migrate/201610242*_add*
+  191  rails db:migrate
+  192  rails generate migration add_iscredit_to_Movements iscredit:boolean
+  193  rails db:migrate
+  194  rails server -b 192.168.2.16
+  195  rm db/migrate/201610242*add*
+  196  rails generate migration add_iscredit_to_Movement iscredit:boolean
+  197  cat db/migrate/20161024215816_add_iscredit_to_movement.rb
+  198  cat db/migrate/201610242*movements.rb
+  199  rails db:migrate
+  200  cat db/migrate/201610242*movements.rb
+  201  ls
+  202  cat db/migrate/201610242*is*
+  203  rm db/migrate/201610242*is*
+  204  rails db:migrate
+  205  rails generate migration add_iscredit_to_Movement iscredit:boolean
+  206  rails db:migrate
+  207  rails server -b 192.168.2.16
+  208  bin/rails db:migrate RAILS_ENV=development
+  209  bin/rails db:migrate RAILS_ENV=development --trace
+  210  find . -name "movements"
+  211  more app/models/movement.rb 
+  212  find . -name "movement*"
+  213  more ./test/models/movement_test.rb
+  214  more ./app/assets/javascripts/movements.coffee
+  215  more ./app/controllers/movements_controller.rb
+  216  grep -rw iscredit .
+  217  more db/schema.rb 
+  218  git status
+  219  git stash
+  220  rails generate migration add_iscredit_to_Movement iscredit:boolean
+  221  bin/rails db:migrate RAILS_ENV=development --trace
+  222  bin/rails db:migrate RAILS_ENV=development --trace --force
+  223  bin/rails db:migrate 
+  224  rails generate migration remove_iscredit_to_Movement iscredit:boolean
+  225  bin/rails db:migrate 
+  226  ms
+  227  git stash
+  228  ls db/migrate/
+  229  rm db/migrate/201610242*_add_*
+  230  rm db/migrate/201610242*_remove_*
+  231  ls db/migrate/
+  232  bin/rails db:migrate 
+  233  rails generate migration add_iscredit_to_movement iscredit:boolean
+  234  bin/rails db:migrate 
+  235  bundle show railties
+  236  bundle open railties
+  237  echo $EDITOR
+  238  export EDITOR=vi
+  239  bundle open railties
+  240  git status
+  241  git stash
+  242  git status
+  243  rm db/migrate/20161024220437_add_iscredit_to_movement.rb
+  244  bin/rails db:migrate 
+  245  rails server -b 192.168.2.16
+  246  rails generate scaffold Transactions user_id:integer at_date:date concept:string amount:decimal is_credit:boolean
+  247  bin/rails db:migrate 
+  248  rails server -b 192.168.2.16
+  249  rails destroy scaffold Movements
+  250  bin/rails db:migrate 
+  251  rails server -b 192.168.2.16
+  252  rails console
+  253  rails server -b 192.168.2.16
+  254  rails console
+  255  git status
+  256  git add app db test
+  257  git status
+  258  git commit -a -m "Removing movements, adding trx"
+  259  git push
+  260  rails server -b 192.168.2.16
+  261  rails generate controller StaticPages home help
+  262  rails server -b 192.168.2.16
+  263  git status
+  264  git add app test
+  265  git commit -a -m "Static pages home / help"
+  266  git push
+  267  rails generate scaffold Medition user_id:integer at_date:date measure:integer 
+  268  rails server -b 192.168.2.16
+  269  bin/rails db:migrate 
+  270  rails server -b 192.168.2.16
+  271  ls
+  272  bundle install
+  273  rails server -b 192.168.2.16
+  274  ls
+  275  cd workspace/Tamle-rails/
+  276  ls
+  277  rails server -b 192.168.2.16
+  278  ifconfig
+  279  rails server -b 192.168.2.15
+  280  ifconfig
+  281  irdonrit
+  282  ifconfig
+  283  set -o vi
+  284  ping 10.0.2.15
+  285  ifconfig
+  286  ls
+  287  cd workspace/Tamle-rails/
+  288  ls
+  289  set -o vi
+  290  rails server -b 192.168.250.109
+  291  rails generate controller StaticPages about contact
+  292  find . -name "help*"
+  293  cp app/views/static_pages/help.html.erb app/views/static_pages/about.html.erb
+  294  cp app/views/static_pages/help.html.erb app/views/static_pages/contact.html.erb
+  295  rails server -b 192.168.250.109
+  296  bg
+  297  rail routes
+  298  source /home/vagrant/.rvm/scripts/rvm
+  299  rail routes
+  300  rails routes
+  301  rails generate controller Users new
+  302  rails server -b 192.168.250.109
+  303  cat /home/vagrant/workspace/Tamle-rails/tmp/pids/server.pid
+  304  ps -ef|grep 3039
+  305  kill -9 3039
+  306  cat /home/vagrant/workspace/Tamle-rails/tmp/pids/server.pidd
+  307  cat /home/vagrant/workspace/Tamle-rails/tmp/pids/server.pid
+  308  rails server -b 192.168.250.109
+  309  ifconfig
+  310  ls
+  311  cd workspace/Tamle-rails/
+  312  ls
+  313  rails
+  314  ruby
+  315  man rail
+  316  rails server -b 192.168.0.110
+  317  set -o vi
+  318  source /home/vagrant/.rvm/scripts/rvm
+  319  rails server -b 192.168.0.110
+  320  ls
+  321  type rails
+  322  locate rails
+  323  ls
+  324  cd workspace/Tamle-rails/
+  325  rails server -b 192.168.0.110
+  326  cd workspace/Tamle-rails/
+  327  ls
+  328  rails console --sandbox
+  329  rails console 
+  330  cd workspace/Tamle-rails/
+  331  rails console 
+  332  rails routes
+  333  ls -ltr
+  334  ifconfig
+  335  cd workspace/Tamle-rails/
+  336  ls
+  337  rails generate migration add_password_digest_to_users password_digest:string
+  338  rails db:migrate
+  339  cd workspace/Tamle-rails/
+  340  rails server -b 192.168.0.110
+  341  ifconfig
+  342  rails server -b 192.168.1.36
+  343  cd workspace/
+  344  ls
+  345  cd Tamle-rails/
+  346  ls
+  347  bundle install
+  348  rails console
+  349  cd workspace/Tamle-rails/
+  350  ifconfig
+  351  ifconfig|grep inet
+  352  ifconfig|grep inet|grep -w 192
+  353  ifconfig|grep inet|grep -w 192|awk '{print $2}'
+  354  ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2
+  355  set -o vi
+  356  rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  357  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  358  ifconfig
+  359  ping 192.168.2.8
+  360  ls
+  361  cd workspace/Tamle-rails/
+  362  ls
+  363  rails console
+  364  mkdir app/views/shared
+  365  ls
+  366  cd workspace/Tamle-rails/
+  367  ls
+  368  rails console
+  369  ifconfig
+  370  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  371  set -o vi
+  372  cd workspace/Tamle-rails/
+  373  rails generate migration add_remember_digest_to_users remember_digest:string
+  374  rails db:migrate
+  375  free -m
+  376  ruby -e 'mb = 380; a="z"*mb*2**20; puts "=)"'
+  377  ruby -e 'mb = 385; a="z"*mb*2**20; puts "=)"'
+  378  ruby -e 'mb = 195; a="z"*mb*2**20; fork; puts "=)"'
+  379  ruby -e 'mb = 200; a="z"*mb*2**20; fork; puts "=)"'
+  380  ruby -e 'mb = 200; a="z"*mb*2**20; `ls`'
+  381  ls
+  382  rails generate migration add_remember_digest_to_users remember_digest:string
+  383  rails db:migrate
+  384  rails console
+  385  bundle install
+  386  git status
+  387  rails generate migration add_admin_to_users admin:boolean
+  388  rails db:migrate
+  389  rails console
+  390  bundle install
+  391  rails generate uploader Picture
+  392  rails generate migration add_picture_to_transactions picture:string
+  393  rails db:migrate
+  394  sudo apt-get update
+  395  sudo apt-get install imagemagick --fix-missing
+  396  ls -l /uploads/transaction/picture/7/002205_2016-09.pdf
+  397  locate uploads
+  398  git status
+  399  rails generate migration add_transactionbyconcept_to_users transactionbyconcept:boolean
+  400  rails generate migration add_transactionbyuser_to_users    transactionbyuser:boolean
+  401  rails generate migration add_transactionbyamount_to_users  transactionbyamount:boolean
+  402  rails generate migration add_transactionbydate_to_users    transactionbydate:boolean
+  403  rails generate migration add_meditionbyuser_to_users       meditionbyuser:boolean
+  404  rails generate migration add_meditionbymeasure_to_users    meditionbymeasure:boolean
+  405  rails generate migration add_meditionbydate_to_users       meditionbydate:boolean
+  406  rails db:migrate
+  407  cd workspace/Tamle-rails/
+  408  rails routes
+  409  open .
+  410  find . -type d -name images
+  411  git status
+  412  cd workspace/Tamle-rails/
+  413  ls
+  414  rails console
+  415  ls
+  416  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  417  cd workspace/Tamle-rails/
+  418  ls
+  419  cd public/
+  420  ls
+  421  ls -l
+  422  ln -s ../app/assets/images
+  423  ls images
+  424  cd workspace/Tamle-rails/
+  425  rails console
+  426  ls -l
+  427  ls -l app
+  428  ls -l app/assets/
+  429  ls -l app/assets
+  430  ls public/
+  431  ls -l public/
+  432  rm public/images
+  433  rails console
+  434  ls
+  435  cd workspace/
+  436  cd
+  437  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  438  cd
+  439  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  440  vim /home/vagrant/.rvm/gems/ruby-2.3.1@tamle/gems/i18n-0.7.0/lib/i18n.rb
+  441  vi /home/vagrant/.rvm/gems/ruby-2.3.1@tamle/gems/i18n-0.7.0/lib/i18n.rb
+  442  fg
+  443  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  444  bundle install
+  445  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  446  cd workspace/Tamle-rails/
+  447  ls
+  448  rails console
+  449  cd workspace/Tamle-rails/
+  450  rails console
+  451  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  452  cd workspace/Tamle-rails/
+  453  ls
+  454  rails console
+  455  cd workspace/Tamle-rails/
+  456  ls
+  457  rails generate migration add_address_to_users     address:string
+  458  rails generate migration add_catastro_to_users    catastro:string
+  459  rails generate migration add_phone_to_users       phone:string
+  460  rails generate migration add_mobile_to_users      mobile:string
+  461  rails db:migrate
+  462  rails routes
+  463  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  464  ls
+  465  cd workspace/Tamle-rails/
+  466  ls
+  467  rails console
+  468  rails console <<EOF
+  469  User.all.find(20)
+  470  EOF
+  471  rails console <<EOF
+  472  Transactions.all.find(20)
+  473  EOF
+  474  rails console <<EOF
+  475  Transaction.all.find(20)
+  476  EOF
+  477  rails console <<EOF
+  478  Transaction.all)
+  479  EOF
+  480  rails console <<EOF
+  481  Transaction.all()
+  482  EOF
+  483  rails console <<EOF
+  484  Transaction.find(1)
+  485  EOF
+  486  rails console <<EOF
+  487  t = Transaction.create :id => 1, :user_id => 0, :at_date => "2016-10-30", :concept => "Fondo Acumulado", :amount => 0, :is_credit => true
+  488  t.save()
+  489  EOF
+  490  set -o vi
+  491  rails console <<EOF
+  492  t = Transaction.create :user_id => 0, :at_date => "2016-10-30", :concept => "Fondo Acumulado", :amount => 0, :is_credit => true
+  493  t.save()
+  494  EOF
+  495  rails console <<EOF
+  496  t = Transaction.create :user_id => 0, :at_date => "2016-10-30", :concept => "Fondo Acumulado", :amount => 0, :is_credit => true
+  497  t.save()
+  498  EOF
+  499  cat /tmp/x
+  500  cat x
+  501  ls
+  502  more x.csv 
+  503  mvim x.csv 
+  504  vim x.csv 
+  505  vi x.csv 
+  506  wc -l x.csv 
+  507  for i in $(cat x.csv); echo $i
+  508  for i in $(cat x.csv); do echo $i; done
+  509  for i in $(cat x.csv); do echo "[$i]'; done
+  510  for i in $(cat x.csv); do echo "[$i]"; done
+  511  for i in $(cat x.csv); do echo "[$i]";  a=$(echo $i|tr ',' ' '); echo $a; done
+  512  for i in $(cat x.csv); do a=$(echo $i|tr ',' ' '); echo $a; done
+  513  for i in $(cat x.csv); do a=$(echo $i|tr ',' ' '); echo $a;  user_id=$(echo $a|awk '{print $1}'
+  514  at_date=$(echo $a|awk '{print $2}'
+  515  concept=$(echo $a|awk '{print $3}'
+  516  for i in $(cat x.csv); do a=$(echo $i|tr ',' ' '); echo $a;  user_id=$(echo $a|awk '{print $1}'
+  517  at_date=$(echo $a|awk '{print $2}'
+  518  concept=$(echo $a|awk '{print $3-$4}'
+  519  amount=$(echo $a|awk '{print $5}'
+  520  for i in $(cat x.csv); do a=$(echo $i|tr ',' ' '); echo $a;  user_id=$(echo $a|awk '{print $1}'
+  521  at_date=$(echo $a|awk '{print $2}'
+  522  concept=$(echo $a|awk '{print $3-$4}'
+  523  amount=$(echo $a|awk '{print $5}'
+  524  is_credit=false
+  525  for i in $(cat x.csv); do a=$(echo $i|tr ',' ' '); echo $a;  user_id=$(echo $a|awk '{print $1}'
+  526  at_date=$(echo $a|awk '{print $2}'
+  527  concept=$(echo $a|awk '{print $3-$4}'
+  528  let amount=$(echo $a|awk '{print $5}'
+  529  is_credit=false
+  530  more x.csv 
+  531  grep ' ' x.csv 
+  532  grep '_' x.csv 
+  533  ls
+  534  for i in $(cat x.csv); do a=$(echo $i|tr ',' ' '); echo $a;  user_id=$(echo $a|awk '{print $1}'
+  535  at_date=$(echo $a|awk '{print $2}'
+  536  concept=$(echo $a|awk '{print $3}'
+  537  let amount=$(echo $a|awk '{print $5}'
+  538  is_credit=$(echo $a|awk '{print $4}'
+  539  echo "$at_date - $concept - $amount - $is_credit - $user_id"
+  540  done
+  541  for i in $(cat x.csv); do a=$(echo $i|tr ',' ' '); echo $a;  user_id=$(echo $a|awk '{print $1}'); at_date=$(echo $a|awk '{print $2}'); concept=$(echo $a|awk '{print $3}'); let amount=$(echo $a|awk '{print $5}'); is_credit=$(echo $a|awk '{print $4}'); echo "$at_date - $concept - $amount - $is_credit - $user_id"; done
+  542  for i in $(cat x.csv); do a=$(echo $i|tr ',' ' '); echo $a;  user_id=$(echo $a|awk '{print $1}'); at_date=$(echo $a|awk '{print $2}'); concept=$(echo $a|awk '{print $3}'); amount=$(echo $a|awk '{print $5}'); is_credit=$(echo $a|awk '{print $4}'); echo "$at_date - $concept - $amount - $is_credit - $user_id"; done
+  543  vim x.csv 
+  544  for i in $(cat x.csv); do a=$(echo $i|tr ',' ' '); echo $a;  user_id=$(echo $a|awk '{print $1}'); at_date=$(echo $a|awk '{print $2}'); concept=$(echo $a|awk '{print $3}'); amount=$(echo $a|awk '{print $5}'); is_credit=$(echo $a|awk '{print $4}'); echo "$at_date - $concept - $amount - $is_credit - $user_id"; done
+  545  for i in $(cat x.csv); do a=$(echo $i|tr ',' ' '); echo $a;  user_id=$(echo $a|awk '{print $1}'); at_date=$(echo $a|awk '{print $2}'); concept=$(echo $a|awk '{print $3}'); amount=$(echo $a|awk '{print $5}'); is_credit=$(echo $a|awk '{print $4}'); echo "$at_date - $concept - $amount - $is_credit - $user_id"; echo t = Transaction.create :user_id => ${user_id}, :at_date => "${at_date}", :concept => "${concept}", :amount => ${amount}, :is_credit => ${is_credit}; done
+  546  for i in $(cat x.csv); do a=$(echo $i|tr ',' ' '); echo $a;  user_id=$(echo $a|awk '{print $1}'); at_date=$(echo $a|awk '{print $2}'); concept=$(echo $a|awk '{print $3}'); amount=$(echo $a|awk '{print $5}'); is_credit=$(echo $a|awk '{print $4}'); echo "$at_date - $concept - $amount - $is_credit - $user_id";  echo "t = Transaction.create :user_id => ${user_id}, :at_date => "${at_date}", :concept => "${concept}", :amount => ${amount}, :is_credit => ${is_credit}"; done
+  547  for i in $(cat x.csv); do a=$(echo $i|tr ',' ' '); echo $a;  user_id=$(echo $a|awk '{print $1}'); at_date=$(echo $a|awk '{print $2}'); concept=$(echo $a|awk '{print $3}'); amount=$(echo $a|awk '{print $5}'); is_credit=$(echo $a|awk '{print $4}'); echo "$at_date - $concept - $amount - $is_credit - $user_id";  echo "t = Transaction.create :user_id => ${user_id}, :at_date => "${at_date}", :concept => "${concept}", :amount => ${amount}, :is_credit => ${is_credit}"; 
+  548  rails console <<EOF
+  549  t = Transaction.create :user_id => ${user_id}, :at_date => "${at_date}", :concept => "${concept}", :amount => ${amount}, :is_credit => ${is_credit}
+  550  t.save()
+  551  EOF
+  552   
+  553  for i in $(cat x.csv); do a=$(echo $i|tr ',' ' '); echo $a;  user_id=$(echo $a|awk '{print $1}'); at_date=$(echo $a|awk '{print $2}'); concept=$(echo $a|awk '{print $3}'); amount=$(echo $a|awk '{print $5}'); is_credit=$(echo $a|awk '{print $4}'); echo "$at_date - $concept - $amount - $is_credit - $user_id";  echo "t = Transaction.create :user_id => ${user_id}, :at_date => "${at_date}", :concept => "${concept}", :amount => ${amount}, :is_credit => ${is_credit}"; 
+  554  rails console <<EOF
+  555  t = Transaction.create :user_id => ${user_id}, :at_date => "${at_date}", :concept => "${concept}", :amount => ${amount}, :is_credit => ${is_credit}
+  556  t.save()
+  557  EOF
+  558   
+  559  for i in $(cat x.csv); do a=$(echo $i|tr ',' ' '); echo $a;  user_id=$(echo $a|awk '{print $1}'); at_date=$(echo $a|awk '{print $2}'); concept=$(echo $a|awk '{print $3}'); amount=$(echo $a|awk '{print $5}'); is_credit=$(echo $a|awk '{print $4}'); echo "$at_date - $concept - $amount - $is_credit - $user_id";  echo "t = Transaction.create :user_id => ${user_id}, :at_date => "${at_date}", :concept => "${concept}", :amount => ${amount}, :is_credit => ${is_credit}"; 
+  560  rails console <<EOF
+  561  t = Transaction.create :user_id => ${user_id}, :at_date => "${at_date}", :concept => "${concept}", :amount => ${amount}, :is_credit => ${is_credit}
+  562  t.save()
+  563  EOF
+  564   done
+  565  for i in $(cat x.csv); do a=$(echo $i|tr ',' ' '); echo $a;  user_id=$(echo $a|awk '{print $1}'); at_date=$(echo $a|awk '{print $2}'); concept=$(echo $a|awk '{print $3}'); amount=$(echo $a|awk '{print $5}'); is_credit=$(echo $a|awk '{print $4}'); echo "$at_date - $concept - $amount - $is_credit - $user_id"; done
+  566  for i in $(cat x.csv); do a=$(echo $i|tr ',' ' '); echo $a;  user_id=$(echo $a|awk '{print $1}'); at_date=$(echo $a|awk '{print $2}'); concept=$(echo $a|awk '{print $3}'); amount=$(echo $a|awk '{print $5}'); is_credit=$(echo $a|awk '{print $4}'); echo "$at_date - $concept - $amount - $is_credit - $user_id";  echo "t = Transaction.create :user_id => ${user_id}, :at_date => '${at_date}', :concept => '${concept}', :amount => ${amount}, :is_credit => ${is_credit}" >> save.list; echo "t.save()" >> save.list; done
+  567  ls -ltr
+  568  more save.list 
+  569  rails console <<EOF
+  570  $(cat save.list)
+  571  EOF
+  572  rails console
+  573  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  574  cd workspace/Tamle-rails/
+  575  rails generate migration remove_transactionbyconcept_from_users transactionbyconcept:boolean
+  576  rails generate migration remove_transactionbyuser_from_users    transactionbyuser:boolean
+  577  rails generate migration remove_transactionbyamount_from_users  transactionbyamount:boolean
+  578  rails generate migration remove_transactionbydate_from_users    transactionbydate:boolean
+  579  rails generate migration remove_meditionbyuser_from_users       meditionbyuser:boolean
+  580  rails generate migration remove_meditionbymeasure_from_users    meditionbymeasure:boolean
+  581  rails generate migration remove_meditionbydate_from_users       meditionbydate:boolean
+  582  rails db:migrate
+  583  ifconfig
+  584  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  585  git diff config/routes.rb
+  586  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  587  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)\
+  588  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  589  cd workspace/Tamle-rails/
+  590  rails generate scaffold Consume at_date:date water_fix_consume_amount:decimal water_provision_amount:decimal exceedance_m3:integer exceedance_m3_amount:decimal
+  591  rails generate scaffold Emission medition_id:integer previous_medition_id:integer at_emission_date:date consume_id:integer water_previous_measure:integer water_measure:integer water_consumed:integer exceedance_m3:integer exceedance_amount:decimal ceb_date:date ceb_amount:decimal social_quote_amount:decimal balance_previous_amount:decimal balance_previous_date:date payment_amount:decimal payment_date:date balance_amount:decimal
+  592  rails db:migrate
+  593  rails route
+  594  rails routes
+  595  rails console
+  596  rails generate migration add_at_emission_date_current_to_emissions       at_emission_date_current:date
+  597  rails generate migration add_at_emission_date_prev_to_emissions       at_emission_date_prev:date
+  598  rails db:migrate
+  599  rails console
+  600  rails generate migration add_social_quote_amount_to_emissions       social_quote_amount:decimal
+  601  rails db:migrate
+  602  rm db/migrate/20161104045425_add_social_quote_amount_to_emissions.rb 
+  603  rails generate migration add_social_quote_amount_to_consumes       social_quote_amount:decimal
+  604  rails db:migrate
+  605  rails generate scaffold Invoice at_emission_date_current:date at_emission_date_prev:date consume_id:integer social_quote_amount:decimal 
+  606  rails generate migration remove_social_quote_amount_from_invoices       social_quote_amount:decimal 
+  607  rails generate migration add_ceb_date_to_invoices       ceb_date:date 
+  608  rails db:migrate
+  609  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  610  bg
+  611  rails generate migration remove_ceb_date_from_invoices       ceb_date:decimal 
+  612  rails db:migrate
+  613  rails generate migration remove_consume_id_from_invoices       consume_id:decimal 
+  614  rails db:migrate
+  615  fg
+  616  rails generate migration remove_consume_id_from_invoices       consume_id:decimal 
+  617  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  618  bg
+  619  rails generate migration remove_at_emission_date_prev_from_invoices       at_emission_date_prev:date 
+  620  rails db:migrate
+  621  fg
+  622  rails generate migration remove_at_emission_date_prev_from_invoices       at_emission_date_prev:date 
+  623  rm db/migrate/20161105203809_remove_at_emission_date_prev_from_invoices.rb
+  624  set -o vi
+  625  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  626  set -o vi
+  627  cd ~/workspace/Tamle-rails/ && rails console
+  628  rails generate migration add_billed_date_to_invoices       billed_date:date 
+  629  rails generate migration add_number_of_members_to_consumes       number_of_members:integer 
+  630  rails db:migrate
+  631  cd ~/workspace/Tamle-rails/ && rails console
+  632  rails routes
+  633  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  634  bg
+  635  rails generate migration add_previous_emission_date_to_emissions       previous_emission_date:date 
+  636  rails db:migrate
+  637  fg
+  638  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  639  bg
+  640  rails generate migration add_account_id_to_transactions       account_id:integer 
+  641  rails db:migrate
+  642  fg
+  643  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  644  bg
+  645  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  646  bg
+  647  clear
+  648  fg
+  649  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  650  bg
+  651  clear
+  652  fg
+  653  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  654  bg
+  655  fg
+  656  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  657  bg
+  658  clear
+  659  fg
+  660  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  661  cd ~/workspace/Tamle-rails/ && rails console
+  662  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  663  cd ~/workspace/Tamle-rails/ && rails console
+  664  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  665  bg
+  666  rails generate migration add_ceb_amount_by_user_to_emissions       ceb_amount_by_user:decimal 
+  667  rails db:migrate
+  668  fg
+  669  rails db:migrate
+  670  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  671  rails generate migration add_exceedance_m3_by_user_to_emissions       exceedance_m3_by_user:integer 
+  672  rails db:migrate
+  673  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  674  rails generate migration add_exceedance_m3_amount_on_user_to_emissions       exceedance_m3_amount_on_user:decimal 
+  675  rails db:migrate
+  676  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  677  rails generate migration add_water_fix_consume_amount_to_emissions       water_fix_consume_amount:decimal 
+  678  rails generate migration add_water_fix_consume_on_user_amount_to_emissions       water_fix_consume_on_user_amount:decimal 
+  679  rails generate migration add_water_provision_amount_amount_to_emissions       water_provision_amount_amount:decimal 
+  680  rails generate migration add_water_provision_amount_on_user_amount_to_emissions       water_provision_amount_on_user_amount:decimal 
+  681  rails db:migrate
+  682  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  683  rails generate migration remove_water_provision_amount_amount_from_emissions       water_provision_amount_amount:decimal 
+  684  rails generate migration remove_water_provision_amount_on_user_amount_from_emissions       water_provision_amount_on_user_amount:decimal 
+  685  rails generate migration add_water_provision_amount_to_emissions       water_provision_amount:decimal 
+  686  rails generate migration add_water_provision_on_user_amount_to_emissions       water_provision_on_user_amount:decimal 
+  687  set -o vi
+  688  rails db:migrate
+  689  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  690  rails generate migration add_emission_id_to_emissions       emission_id:boolean 
+  691  rails generate migration remove_emission_id_from_emissions       emission_id:boolean 
+  692  rm db/migrate/20161113115837_add_emission_id_to_emissions.rb db/migrate/20161113115904_remove_emission_id_from_emissions.rb
+  693  rails generate migration add_emission_id_to_transactions       emission_id:boolean 
+  694  rails db:migrate
+  695  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  696  rails generate migration remove_emission_id_from_transactions       emission_id:boolean 
+  697  rails generate migration add_emission_id_to_transactions       emission_id:integer 
+  698  rails db:migrate
+  699  rails db:migrate --force
+  700  rails db:migrate 
+  701  rails generate migration add_emission_id_to_transactions       emission_id:integer 
+  702  rails generate migration add_emission_id_to_transactions       emission_id:integer  --force
+  703  rails db:migrate 
+  704  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  705  rails generate migration add_medition_id_to_transactions       medition_id:integer 
+  706  rails db:migrate 
+  707  rails generate migration add_medition_id_to_transactions       medition_id:integer 
+  708  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  709  rails generate migration remove_emission_id_from_transactions       emission_id:boolean 
+  710  rails generate migration remove_emission_id_from_transactions       emission_id:intenger 
+  711  rails generate migration remove_emission_id_from_transactions       emission_id:integer 
+  712  rails db:migrate 
+  713  git status
+  714  ls db/migrate/*medition_id*
+  715  rm db/migrate/*medition_id*
+  716  rm db/migrate/*medintion_id*
+  717  rm db/migrate/*emission_id**
+  718  git status
+  719  rails generate migration remove_emission_id_from_transactions       emission_id:integer 
+  720  rails db:migrate 
+  721  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  722  cd workspace/Tamle-rails/
+  723  cd ~/workspace/Tamle-rails/ && rails console
+  724  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  725  ifconfig
+  726  set -o vi
+  727  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 5|awk '{print $2}'|cut -d: -f2)
+  728  rails generate migration add_invoice_id_to_emissions       invoice_id:integer 
+  729  rails generate migration add_invoice_id_to_transactions       invoice_id:integer 
+  730  rails db:migrate 
+  731  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 5|awk '{print $2}'|cut -d: -f2)
+  732  rails generate migration add_invoice_id_to_emissions       invoice_id:integer 
+  733  rails generate migration add_invoice_id_to_transactions       invoice_id:integer 
+  734  rails generate migration add_billed_to_invoices       billed:boolean 
+  735  rails db:migrate 
+  736  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 5|awk '{print $2}'|cut -d: -f2)
+  737  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  738  cd ~/workspace/Tamle-rails/ && rails console
+  739  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  740  rails generate migration add_invoice_id_to_meditions             invoice_id:integer
+  741  rails generate migration remove_medition_id_from_meditions       medition_id:integer
+  742  rails db:migrate 
+  743  rails destroy scaffold Movements
+  744  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  745  bg
+  746  rails generate wicked_pdf
+  747  bundle install
+  748  git status
+  749  git diff
+  750  set -o vi
+  751  ls
+  752  mvim Gemfile
+  753  bundle install
+  754  find . -name "WickedPdf.config"
+  755  find . -name "*.config"
+  756  fg
+  757  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  758  bg
+  759  ls -l /usr/local/bin/wkhtmltopdf
+  760  locate wkhtmltopdf
+  761  type wkhtmltopdf
+  762  ls -l /home/vagrant/.rvm/gems/ruby-2.3.1@tamle/bin/wkhtmltopdf
+  763  file  /home/vagrant/.rvm/gems/ruby-2.3.1@tamle/bin/wkhtmltopdf
+  764  more  /home/vagrant/.rvm/gems/ruby-2.3.1@tamle/bin/wkhtmltopdf
+  765  /home/vagrant/.rvm/gems/ruby-2.3.1@tamle/bin/wkhtmltopdf
+  766  ls -l /tmp/*.pdf
+  767  fg
+  768  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  769  bg
+  770  ls
+  771  ls  /home/vagrant/workspace/Tamle-rails/pdfs
+  772  fg
+  773  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  774  fg
+  775  kll %1
+  776  kill %1
+  777  jobs
+  778  fg
+  779  cd ~/workspace/Tamle-rails/ && rails console
+  780  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  781  ls -l /home/vagrant/workspace/Tamle-rails/app/views/
+  782  ls -l /home/vagrant/workspace/Tamle-rails/app/views/emissions/show.pdf.erb 
+  783  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  784  ls -l /home/vagrant/workspace/Tamle-rails/app/views
+  785  ls -l /home/vagrant/workspace/Tamle-rails/app/views/emissions/_show.pdf.erb
+  786  set -o vi
+  787  ls -l /home/vagrant/workspace/Tamle-rails/app/views/_show.pdf.erb
+  788  find . -name "_show.pdf.erb"
+  789  find . -name "show.pdf.erb"
+  790  ls -l /home/vagrant/workspace/Tamle-rails/app/views/show.pdf.erb
+  791  ls -l /home/vagrant/workspace/Tamle-rails/app/views/emissions/show.pdf.erb
+  792  mv /home/vagrant/workspace/Tamle-rails/app/views/emissions/show.pdf.erb /home/vagrant/workspace/Tamle-rails/app/views/emissions/_show.pdf.erb
+  793  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  794  bg
+  795  find . -name "*icked*"
+  796  fg
+  797  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  798  bg
+  799  find . -name "*.css"
+  800  mvim ./app/assets/stylesheets/application.css
+  801  vim ./app/assets/stylesheets/application.css
+  802  fg
+  803  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  804  bg
+  805  ls -l tmp/wicked_pdf20170104-4286-1g57c4v.html
+  806  ls -l /tmp/wicked_pdf20170104-4286-1g57c4v.html
+  807  find . -name "html"
+  808  locate wicked*html
+  809  ls -ltr /tmp
+  810  fg
+  811  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  812  git status
+  813  git add public/stylesheets/documents.css.scss.erb
+  814  git add config/initializers/wicked_pdf_helpers.rb
+  815  git add app/views/emissions/_show.pdf.erb
+  816  git status
+  817  git add pdfs
+  818  git status
+  819  git commit -a -m "Using Pdf generator for bills"
+  820  git status
+  821  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  822  ifconfig
+  823  rails server -b 10.0.2.15
+  824  ls
+  825  ifconfig
+  826  type rails
+  827  cd ~/workspace/Tamle-rails/
+  828  type rails
+  829  ls -a
+  830  ls
+  831  ls -l /home/vagrant/.rvm/gems/ruby-2.3.1@tamle/bin/rails
+  832  set -o vi
+  833  more  /home/vagrant/.rvm/gems/ruby-2.3.1@tamle/bin/rails
+  834  ls
+  835  type tamle
+  836  cd workspace/Tamle-rails/
+  837  ls
+  838  cd Tamle-rails/
+  839  ls
+  840  type rails
+  841  ls
+  842  cd ~/workspace/Tamle-rails/
+  843  ls
+  844  type ruby
+  845  ruby server -b 
+  846  ifconfig
+  847  ruby server -b 10.5.50.230
+  848  set -o vi
+  849  rails server -b 10.5.50.230
+  850  ifconfig
+  851  ls
+  852  cd workspace/Tamle-rails/
+  853  ls
+  854  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  855  bg
+  856  pwd
+  857  ls rails
+  858  ls
+  859  type rails
+  860  typa rails
+  861  type rails
+  862  cd ~/workspace/Tamle-rails/ && rails server -b $(ifconfig|grep inet|grep -w 192|awk '{print $2}'|cut -d: -f2)
+  863  ls -a
+  864  cd /home/
+  865  ls -a
+  866  du -hs vagrant
+  867  sudo tar cf vagrant.tar vagrant
+  868  mv vagrant.tar vagrant/workspace/Tamle-rails/
+  869  cd
+  870  type rails
+  871  ls
+  872  cd workspace/Tamle-rails/
+  873  type rails
+  874  ls 
+  875  ls -a
+  876  ls
+  877  cd workspace/Tamle-rails/
+  878  ls
+  879  type rails
+  880  cd 
+  881  ls -a
+  882  ls .rvm
+  883  clear
+  884  ls -a
+  885  sudo bash
+  886  cd
+  887  cd workspace/Tamle-rails/
+  888  ls -a
+  889  type rails
+  890  ls -l /home/vagrant/.rvm/gems/ruby-2.3.1@tamle/bin/rails
+  891  env
+  892  clear
+  893  env
+  894  ls /etc/profile.d/
+  895  type rails
+  896  ls -ltr
+  897  pwd
+  898  ifconfig
+  899  rails -v
+  900  rails --version
+  901  gem status rails
+  902  gem list rails
+  903  rails
+  904  cd workspace/Tamle-rails/
+  905  type rails
+  906  rails -v
+  907  gem list
+  908  gem list|grep i18
+  909  gem list|grep ruby
+  910  set -o vi
+  911  history /tmp/x/h.txt
+  912  history > /tmp/x/h.txt
+  913  history > /tmp/h.txt

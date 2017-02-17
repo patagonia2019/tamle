@@ -1,0 +1,502 @@
+t = Transaction.create :user_id => user_id, :at_date => 'at_date', :concept => 'concept', :amount => amount, :is_credit => is_credit
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '6-Dec-2013', :concept => 'AGUA_Dic-13', :amount => 570.4, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '10-Jan-2014', :concept => 'AGUA_Ene-14', :amount => 964.6, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '10-Feb-2014', :concept => 'AGUA_Feb-14', :amount => 974.2, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '10-Mar-2014', :concept => 'AGUA_Feb-14', :amount => 1612.2, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '6-Apr-2014', :concept => 'AGUA_Mar-14', :amount => 1078, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '5-May-2014', :concept => 'AGUA_Abr-14', :amount => 1002.4, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '8-Jun-2014', :concept => 'AGUA_May-14', :amount => 969.6, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '8-Jul-2014', :concept => 'AGUA_Jun-14', :amount => 964.6, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '8-Aug-2014', :concept => 'AGUA_Jul-14', :amount => 974.7, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '11-Sep-2014', :concept => 'AGUA_Ago-14', :amount => 974.2, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '8-Oct-2014', :concept => 'AGUA_Oct-14', :amount => 964.6, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '7-Nov-2014', :concept => 'AGUA_Nov-14', :amount => 964.6, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '9-Dec-2014', :concept => 'AGUA_Dic-14', :amount => 964.6, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '7-Jan-2015', :concept => 'AGUA_Ene-15', :amount => 964.6, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '8-Feb-2015', :concept => 'AGUA_Ene-15', :amount => 1004.9, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '9-Mar-2015', :concept => 'AGUA_Mar-15', :amount => 1136, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '12-Apr-2015', :concept => 'AGUA_Apr-15', :amount => 974.2, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '11-May-2015', :concept => 'AGUA_May-15', :amount => 964.6, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '6-Jun-2015', :concept => 'AGUA_Jun-15', :amount => 964.6, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '3-Jul-2015', :concept => 'AGUA_Jul-15', :amount => 964.6, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '8-Aug-2015', :concept => 'AGUA_Ago-15', :amount => 964.6, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '3-Sep-2015', :concept => 'AGUA_Sep-15', :amount => 1099, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '3-Oct-2015', :concept => 'AGUA_Oct-15', :amount => 1099, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '6-Nov-2015', :concept => 'AGUA_Nov-15', :amount => 1099, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '7-Dec-2015', :concept => 'AGUA_Dic-15', :amount => 1095.5, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '6-Jan-2016', :concept => 'AGUA_Ene-16', :amount => 1095.5, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '3-Feb-2016', :concept => 'AGUA_Feb-16', :amount => 3178, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '5-Mar-2016', :concept => 'AGUA_Mar-16', :amount => 755.5, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '6-Apr-2016', :concept => 'AGUA_Abr-16', :amount => 1094, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '11-May-2016', :concept => 'AGUA_May-16', :amount => 1119.5, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '4-Jun-2016', :concept => 'AGUA_Jun-16', :amount => 1094, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '8-Jul-2016', :concept => 'AGUA_Jul-16', :amount => 1094, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '4-Aug-2016', :concept => 'AGUA_Ago-16', :amount => 1094, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '7-Sep-2016', :concept => 'AGUA_Sep-16', :amount => 1094, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '6-Oct-2016', :concept => 'AGUA_Oct-16', :amount => 1094, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '8-Nov-2013', :concept => 'AGUA_Nov-13_Nov-13', :amount => 537.6, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '14-Oct-2013', :concept => 'AGUA_Oct-13_Oct-13', :amount => 537.6, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '7-Sep-2013', :concept => 'AGUA_Sep-13_Sep-13', :amount => 628.3, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 9, :at_date => '10-Nov-2013', :concept => 'Barria_Oct-13', :amount => 122, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '6-Dec-2013', :concept => 'CEB_Dic-13', :amount => 98.94, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '10-Jan-2014', :concept => 'CEB_Ene-14', :amount => 97.37, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '10-Feb-2014', :concept => 'CEB_Feb-14', :amount => 94.03, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '10-Mar-2014', :concept => 'CEB_Feb-14', :amount => 96.01, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '6-Apr-2014', :concept => 'CEB_Mar-14', :amount => 89.95, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '8-May-2014', :concept => 'CEB_Abr-14', :amount => 97.27, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '8-Jun-2014', :concept => 'CEB_May-14', :amount => 94.98, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '8-Jul-2014', :concept => 'CEB_Jun-14', :amount => 108.64, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '8-Aug-2014', :concept => 'CEB_Jul-14', :amount => 105.59, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '11-Sep-2014', :concept => 'CEB_Ago-14', :amount => 115.08, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '8-Oct-2014', :concept => 'CEB_Oct-14', :amount => 112.21, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '7-Nov-2014', :concept => 'CEB_Nov-14', :amount => 97.13, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '9-Dec-2014', :concept => 'CEB_Dic-14', :amount => 105.02, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '7-Jan-2015', :concept => 'CEB_Ene-15', :amount => 90.77, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '8-Feb-2015', :concept => 'CEB_Ene-15', :amount => 105.79, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '9-Mar-2015', :concept => 'CEB_Mar-15', :amount => 113.55, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '12-Apr-2015', :concept => 'CEB_Apr-15', :amount => 111.13, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '11-May-2015', :concept => 'CEB_May-15', :amount => 123.89, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '8-Jun-2015', :concept => 'CEB_Jun-15', :amount => 123.89, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '3-Jul-2015', :concept => 'CEB_Jul-15', :amount => 125.26, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '8-Aug-2015', :concept => 'CEB_Ago-15', :amount => 130.27, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '7-Sep-2015', :concept => 'CEB_Sep-15', :amount => 134.02, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '3-Oct-2015', :concept => 'CEB_Oct-15', :amount => 137.4, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '6-Nov-2015', :concept => 'CEB_Nov-15', :amount => 131.61, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '7-Dec-2015', :concept => 'CEB_Dic-15', :amount => 126.58, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '6-Jan-2016', :concept => 'CEB_Ene-16', :amount => 117.79, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '3-Feb-2016', :concept => 'CEB_Feb-16', :amount => 141.31, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '5-Mar-2016', :concept => 'CEB_Mar-16', :amount => 128.88, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '6-Apr-2016', :concept => 'CEB_Abr-16', :amount => 208.72, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '11-May-2016', :concept => 'CEB_May-16', :amount => 237.03, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '4-Jun-2016', :concept => 'CEB_Jun-16', :amount => 233.34, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '8-Jul-2016', :concept => 'CEB_Jul-16', :amount => 235.12, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '4-Aug-2016', :concept => 'CEB_Ago-16', :amount => 237.05, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '7-Sep-2016', :concept => 'CEB_Sep-16', :amount => 240.61, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '6-Oct-2016', :concept => 'CEB_Oct-16', :amount => 245.63, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '8-Nov-2013', :concept => 'CEB_Nov-13_Nov-13', :amount => 86.79, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '14-Oct-2013', :concept => 'CEB_Oct-13_Oct-13', :amount => 90.17, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 20, :at_date => '7-Sep-2013', :concept => 'CEB_Sep-13_Sep-13', :amount => 97.36, :is_credit => false
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '11-Oct-2013', :concept => 'Elba_Pinteño_Sep-13', :amount => 117, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '18-Oct-2013', :concept => 'Elba_Pinteño_Oct-13', :amount => 150, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '17-Nov-2013', :concept => 'Elba_Pinteño_Nov-13', :amount => 100, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '18-Dec-2013', :concept => 'Elba_Pinteño_Dic-13', :amount => 115, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '2-Feb-2014', :concept => 'Elba_Pinteño_Ene-14', :amount => 220, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '17-Feb-2014', :concept => 'Elba_Pinteño_Feb-14', :amount => 153.35, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '24-Feb-2014', :concept => 'Elba_Pinteño_Mar-14', :amount => 200, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '19-Apr-2014', :concept => 'Elba_Pinteño_Abr-14', :amount => 160, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '17-May-2014', :concept => 'Elba_Pinteño_May-14', :amount => 164.15, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '22-Jun-2014', :concept => 'Elba_Pinteño_Jun-14', :amount => 170, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '25-Jul-2014', :concept => 'Elba_Pinteño_Jul-14', :amount => 164, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '23-Aug-2014', :concept => 'Elba_Pinteño_Ago-14', :amount => 162, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '20-Sep-2014', :concept => 'Elba_Pinteño_Sep-14', :amount => 163.4, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '5-Oct-2014', :concept => 'Elba_Pinteño_Oct-14', :amount => 190, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '20-Nov-2014', :concept => 'Elba_Pinteño_Nov-14', :amount => 173.3, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '20-Dec-2014', :concept => 'Elba_Pinteño_Dic-14', :amount => 178, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '16-Feb-2015', :concept => 'Elba_Pinteño_Feb-15', :amount => 350, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '21-Mar-2015', :concept => 'Elba_Pinteño_Mar-15', :amount => 170.4, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '13-Apr-2015', :concept => 'Elba_Pinteño_Apr-15', :amount => 164, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '12-May-2015', :concept => 'Elba_Pinteño_May-15', :amount => 165.5, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '27-Jun-2015', :concept => 'Elba_Pinteño_Jun-15', :amount => 164, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '26-Jul-2015', :concept => 'Elba_Pinteño_Jul-15', :amount => 166, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '26-Sep-2015', :concept => 'Elba_Pinteño_Ago-15', :amount => 166, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '2-Oct-2015', :concept => 'Elba_Pinteño_Sep-15', :amount => 167, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '30-Oct-2015', :concept => 'Elba_Pinteño_Oct-15', :amount => 187, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '18-Nov-2015', :concept => 'Elba_Pinteño_Nov-15', :amount => 230, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '19-Dec-2015', :concept => 'Elba_Pinteño_Dic-15', :amount => 230, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '16-Jan-2016', :concept => 'Elba_Pinteño_Ene-16', :amount => 183, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '20-Feb-2016', :concept => 'Elba_Pinteño_Feb-16', :amount => 243, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '15-Mar-2016', :concept => 'Elba_Pinteño_Mar-16', :amount => 185, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '11-Apr-2016', :concept => 'Elba_Pinteño_Abr-16', :amount => 197, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '15-May-2016', :concept => 'Elba_Pinteño_May-16', :amount => 201, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '20-Jun-2016', :concept => 'Elba_Pinteño_Jun-16', :amount => 220, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '16-Jul-2016', :concept => 'Elba_Pinteño_Jul-16', :amount => 200, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '16-Sep-2016', :concept => 'Elba_Pinteño_Sep-16', :amount => 402, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 10, :at_date => '18-Oct-2016', :concept => 'Elba_Pinteño_Oct-16', :amount => 210, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 0, :at_date => '1-Sep-2013', :concept => 'Fondo_Acumulado_Sep-13', :amount => 2200, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '4-Sep-2013', :concept => 'Gabriela_Segura_Sep-13', :amount => 200, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '16-Sep-2013', :concept => 'Gabriela_Segura_Sep-13', :amount => 100, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '18-Sep-2013', :concept => 'Gabriela_Segura_Sep-13', :amount => 200, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '16-Oct-2013', :concept => 'Gabriela_Segura_Oct-13', :amount => 142, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '13-Dec-2013', :concept => 'Gabriela_Segura_Nov-13', :amount => 100, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '16-Dec-2013', :concept => 'Gabriela_Segura_Dic-13', :amount => 100, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '1-Mar-2014', :concept => 'Gabriela_Segura_Feb-14', :amount => 322.75, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '28-Mar-2014', :concept => 'Gabriela_Segura_Mar-14', :amount => 160, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '18-Apr-2014', :concept => 'Gabriela_Segura_Abr-14', :amount => 150, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '8-May-2014', :concept => 'Gabriela_Segura_May-14', :amount => 180, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '11-Jun-2014', :concept => 'Gabriela_Segura_Jun-14', :amount => 155, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '15-Jul-2014', :concept => 'Gabriela_Segura_Jul-14', :amount => 160, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '4-Aug-2014', :concept => 'Gabriela_Segura_Jul-14', :amount => 165, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '9-Aug-2014', :concept => 'Gabriela_Segura_Ago-14', :amount => 160, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '2-Oct-2014', :concept => 'Gabriela_Segura_Sep-14', :amount => 175, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '28-Oct-2014', :concept => 'Gabriela_Segura_Oct-14', :amount => 155, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '6-Dec-2014', :concept => 'Gabriela_Segura_Nov-14', :amount => 161, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '13-Dec-2014', :concept => 'Gabriela_Segura_Dic-14', :amount => 200, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '13-Jan-2015', :concept => 'Gabriela_Segura_Ene-15', :amount => 120, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '13-Feb-2015', :concept => 'Gabriela_Segura_Feb-15', :amount => 160, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '31-Mar-2015', :concept => 'Gabriela_Segura_Mar-15', :amount => 165, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '20-Apr-2015', :concept => 'Gabriela_Segura_Apr-15', :amount => 170, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '12-May-2015', :concept => 'Gabriela_Segura_May-15', :amount => 166, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '22-Jun-2015', :concept => 'Gabriela_Segura_Jun-15', :amount => 164, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '7-Aug-2015', :concept => 'Gabriela_Segura_Jul-15', :amount => 200, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '_', :concept => 'Gabriela_Segura_Ago-15', :amount => 132, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '30-Sep-2015', :concept => 'Gabriela_Segura_Sep-15', :amount => 170, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '15-Oct-2015', :concept => 'Gabriela_Segura_Oct-15', :amount => 200, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '16-Nov-2015', :concept => 'Gabriela_Segura_Nov-15', :amount => 170, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '15-Dec-2015', :concept => 'Gabriela_Segura_Dic-15', :amount => 200, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '1-Feb-2016', :concept => 'Gabriela_Segura_Ene-16', :amount => 170, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '4-Apr-2016', :concept => 'Gabriela_Segura_Mar-16', :amount => 300, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '26-Apr-2016', :concept => 'Gabriela_Segura_Abr-16', :amount => 265, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '19-May-2016', :concept => 'Gabriela_Segura_May-16', :amount => 201, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '25-Jun-2016', :concept => 'Gabriela_Segura_Jun-16', :amount => 200, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '20-Jul-2016', :concept => 'Gabriela_Segura_Jul-16', :amount => 200, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '23-Aug-2016', :concept => 'Gabriela_Segura_Ago-16', :amount => 203, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '13-Sep-2016', :concept => 'Gabriela_Segura_Sep-16', :amount => 201, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 3, :at_date => '20-Oct-2016', :concept => 'Gabriela_Segura_Oct-16', :amount => 200, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 5, :at_date => '6-Nov-2013', :concept => 'Julia_Sanchez_Oct-13', :amount => 100, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 5, :at_date => '6-Dec-2013', :concept => 'Julia_Sanchez_Nov-13', :amount => 100, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 5, :at_date => '27-Jan-2014', :concept => 'Julia_Sanchez_Ene-14', :amount => 200, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 5, :at_date => '29-Mar-2014', :concept => 'Julia_Sanchez_Mar-14', :amount => 284.28, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 5, :at_date => '10-May-2014', :concept => 'Julia_Sanchez_May-14', :amount => 322, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 5, :at_date => '23-Jul-2014', :concept => 'Julia_Sanchez_Jul-14', :amount => 325, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 5, :at_date => '8-Oct-2014', :concept => 'Julia_Sanchez_Oct-14', :amount => 500, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 5, :at_date => '7-Mar-2015', :concept => 'Julia_Sanchez_Feb-15', :amount => 800, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 5, :at_date => '10-Nov-2015', :concept => 'Julia_Sanchez_Nov-15', :amount => 2000, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 5, :at_date => '20-May-2016', :concept => 'Julia_Sanchez_May-16', :amount => 1000, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '1-Sep-2013', :concept => 'Komanski_Marcela_Sep-13', :amount => 100, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '1-Oct-2013', :concept => 'Komanski_Marcela_Oct-13', :amount => 100, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '16-Mar-2014', :concept => 'Komanski_Marcela_Feb-14', :amount => 204, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '16-Mar-2014', :concept => 'Komanski_Marcela_Mar-14', :amount => 214, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '27-Jan-2014', :concept => 'Komanski_Marcela_Ene-14', :amount => 318, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '30-Dec-2013', :concept => 'Komanski_Marcela_Nov-13', :amount => 79.5, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '26-Jan-2014', :concept => 'Komanski_Marcela_Dic-13', :amount => 154, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '6-Apr-2014', :concept => 'Komanski_Marcela_Mar-14', :amount => 215, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '5-May-2014', :concept => 'Komanski_Marcela_Abr-14', :amount => 191, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '8-Jun-2014', :concept => 'Komanski_Marcela_May-14', :amount => 192, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '8-Jul-2014', :concept => 'Komanski_Marcela_Jun-14', :amount => 352, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '8-Aug-2014', :concept => 'Komanski_Marcela_Jul-14', :amount => 169, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '11-Sep-2014', :concept => 'Komanski_Marcela_Ago-14', :amount => 163, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '2-Oct-2014', :concept => 'Komanski_Marcela_Ago-14', :amount => 164, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '7-Nov-2014', :concept => 'Komanski_Marcela_Sep-14', :amount => 164, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '15-Nov-2014', :concept => 'Komanski_Marcela_Oct-14', :amount => 169, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '13-Dec-2014', :concept => 'Komanski_Marcela_Nov-14', :amount => 203, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '13-Jan-2015', :concept => 'Komanski_Marcela_Dic-14', :amount => 211, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '8-Feb-2015', :concept => 'Komanski_Marcela_Ene-15', :amount => 204, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '12-Mar-2015', :concept => 'Komanski_Marcela_Feb-15', :amount => 189, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '12-Apr-2015', :concept => 'Komanski_Marcela_Mar-15', :amount => 186, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '12-May-2015', :concept => 'Komanski_Marcela_Apr-15', :amount => 174, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '14-Jun-2015', :concept => 'Komanski_Marcela_May-15', :amount => 174, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '3-Jul-2015', :concept => 'Komanski_Marcela_Jun-15', :amount => 169, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '8-Aug-2015', :concept => 'Komanski_Marcela_Jul-15', :amount => 166, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '26-Sep-2015', :concept => 'Komanski_Marcela_Ago-15', :amount => 166, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '3-Oct-2015', :concept => 'Komanski_Marcela_Sep-15', :amount => 166, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '9-Nov-2015', :concept => 'Komanski_Marcela_Oct-15', :amount => 187, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '9-Nov-2015', :concept => 'Komanski_Marcela_Nov-15', :amount => 186, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '7-Dec-2015', :concept => 'Komanski_Marcela_Dic-15', :amount => 466, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '10-Jan-2016', :concept => 'Komanski_Marcela_Ene-16', :amount => 502, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '13-Feb-2016', :concept => 'Komanski_Marcela_Feb-16', :amount => 369, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '13-Mar-2016', :concept => 'Komanski_Marcela_Mar-16', :amount => 185, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '10-Apr-2016', :concept => 'Komanski_Marcela_Abr-16', :amount => 234, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '11-May-2016', :concept => 'Komanski_Marcela_May-16', :amount => 201, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '13-Jun-2016', :concept => 'Komanski_Marcela_Jun-16', :amount => 227, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '8-Jul-2016', :concept => 'Komanski_Marcela_Jul-16', :amount => 201, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '14-Aug-2016', :concept => 'Komanski_Marcela_Ago-16', :amount => 201, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '7-Sep-2016', :concept => 'Komanski_Marcela_Sep-16', :amount => 219, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 1, :at_date => '6-Oct-2016', :concept => 'Komanski_Marcela_Oct-16', :amount => 201, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 5, :at_date => '30-Sep-2013', :concept => 'Lean_Sep-13', :amount => 300, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 9, :at_date => '9-Mar-2014', :concept => 'Luis_Barria_Feb-14', :amount => 702, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 9, :at_date => '7-Apr-2014', :concept => 'Luis_Barria_Mar-14', :amount => 248.7, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 9, :at_date => '10-May-2014', :concept => 'Luis_Barria_May-14', :amount => 322, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 9, :at_date => '10-Jul-2014', :concept => 'Luis_Barria_Jun-14', :amount => 162, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 9, :at_date => '14-Aug-2014', :concept => 'Luis_Barria_Ago-14', :amount => 326, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 9, :at_date => '5-Oct-2014', :concept => 'Luis_Barria_Sep-14', :amount => 164, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 9, :at_date => '13-Dec-2014', :concept => 'Luis_Barria_Nov-14', :amount => 325, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 9, :at_date => '4-Feb-2015', :concept => 'Luis_Barria_Ene-15', :amount => 374, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 9, :at_date => '27-Apr-2015', :concept => 'Luis_Barria_Apr-15', :amount => 571, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 9, :at_date => '26-Jun-2015', :concept => 'Luis_Barria_Jun-15', :amount => 330, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 9, :at_date => '4-Oct-2015', :concept => 'Luis_Barria_Sep-15', :amount => 500, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 9, :at_date => '11-Nov-2015', :concept => 'Luis_Barria_Nov-15', :amount => 372, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 9, :at_date => '30-Jan-2016', :concept => 'Luis_Barria_Ene-16', :amount => 405, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 9, :at_date => '26-Mar-2016', :concept => 'Luis_Barria_Mar-16', :amount => 450, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 9, :at_date => '28-Apr-2016', :concept => 'Luis_Barria_Abr-16', :amount => 235, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 9, :at_date => '11-Jun-2016', :concept => 'Luis_Barria_May-16', :amount => 202, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 9, :at_date => '14-Aug-2016', :concept => 'Luis_Barria_Jul-16', :amount => 402, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 2, :at_date => '25-Sep-2013', :concept => 'María_Mrakovich_Sep-13', :amount => 100, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 2, :at_date => '20-Nov-2013', :concept => 'María_Mrakovich_Oct-13', :amount => 100, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 2, :at_date => '20-Nov-2013', :concept => 'María_Mrakovich_Nov-13', :amount => 100, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 2, :at_date => '3-Feb-2014', :concept => 'María_Mrakovich_Ene-14', :amount => 255, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 2, :at_date => '9-Mar-2014', :concept => 'María_Mrakovich_Feb-14', :amount => 160, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 2, :at_date => '9-Mar-2014', :concept => 'María_Mrakovich_Mar-14', :amount => 160, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 2, :at_date => '18-Apr-2014', :concept => 'María_Mrakovich_Abr-14', :amount => 162, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 2, :at_date => '14-Jul-2014', :concept => 'María_Mrakovich_Jul-14', :amount => 500, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 2, :at_date => '16-Nov-2014', :concept => 'María_Mrakovich_Nov-14', :amount => 700, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 2, :at_date => '22-Dec-2014', :concept => 'María_Mrakovich_Dic-14', :amount => 100, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 2, :at_date => '13-Jan-2015', :concept => 'María_Mrakovich_Ene-15', :amount => 200, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 2, :at_date => '15-Mar-2015', :concept => 'María_Mrakovich_Mar-15', :amount => 300, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 2, :at_date => '13-Jul-2015', :concept => 'María_Mrakovich_Jul-15', :amount => 700, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 2, :at_date => '17-Feb-2016', :concept => 'María_Mrakovich_Feb-16', :amount => 1120, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 2, :at_date => '14-Oct-2016', :concept => 'María_Mrakovich_Oct-16', :amount => 2000, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 8, :at_date => '5-Oct-2013', :concept => 'Paco_García_Sep-13', :amount => 200, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 8, :at_date => '20-Feb-2014', :concept => 'Paco_García_Feb-14', :amount => 462, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 8, :at_date => '24-May-2014', :concept => 'Paco_García_May-14', :amount => 600, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 8, :at_date => '9-Aug-2014', :concept => 'Paco_García_Ago-14', :amount => 404, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 8, :at_date => '14-Oct-2014', :concept => 'Paco_García_Oct-14', :amount => 340, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 8, :at_date => '13-Dec-2014', :concept => 'Paco_García_Dic-14', :amount => 330, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 8, :at_date => '18-Jan-2015', :concept => 'Paco_García_Ene-15', :amount => 200, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 8, :at_date => '2-Apr-2015', :concept => 'Paco_García_Mar-15', :amount => 500, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 8, :at_date => '8-Aug-2015', :concept => 'Paco_García_Ago-15', :amount => 750, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 8, :at_date => '10-Oct-2015', :concept => 'Paco_García_Sep-15', :amount => 168, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 8, :at_date => '13-Feb-2016', :concept => 'Paco_García_Ene-16', :amount => 1400, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 8, :at_date => '15-Mar-2016', :concept => 'Paco_García_Mar-16', :amount => 210, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 8, :at_date => '10-Nov-2013', :concept => 'Pago_Garcia_Nov-13', :amount => 106, :is_credit => true
+t.save()
+t = Transaction.create :user_id => 8, :at_date => '28-Aug-2016', :concept => 'Rosana_Gonzalez_Ago-16', :amount => 1072, :is_credit => true
+t.save()

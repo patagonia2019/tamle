@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= t"Consumes" %></h1>
+
+<%= will_paginate @consumes %>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t"at_date" %></th>
+      <th><%= t"water_fix_consume_amount" %></th>
+      <th><%= t"water_provision_amount" %></th>
+      <th><%= t"exceedance_m3" %></th>
+      <th><%= t"exceedance_m3_amount" %></th>
+      <th><%= t"social_quote_amount" %></th>
+      <th><%= t"number_of_members" %></th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+     <%= render @consumes %>
+  </tbody>
+</table>
+
+<%= will_paginate %>
+
+<br>
+
+<% if is_admin? %>
+  <%= link_to t('New_Consume'), new_consume_path, class: "btn btn-primary" %>
+<% end %>

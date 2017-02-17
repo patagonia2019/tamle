@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<% if is_admin? %>
+<h1><%= t"Emissions" %></h1>
+<% else %>
+<h1><%= t"MyEmissions" %></h1>
+<% end %>
+
+<%= will_paginate @emissions %>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= sortable "at_emission_date" %> </th>
+      <th><%= sortable "user_id" %> </th>
+      <th><%= t"Actual_reading" %> </th>
+      <th><%= t"Total_consumption" %> </th>
+      <th><%= t"surpluses" %> </th>
+      <th><%= t"Balance_previous"%> </th>
+      <th><%= t"Last_Paid"%> </th>
+      <th><%= t"balance_amount"%> </th>
+      <th colspan="4"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+     <%= render @emissions %>
+  </tbody>
+</table>
+
+<%= will_paginate %>
+
+<br>
+
+<% if is_admin? %>
+  <%= link_to t('New_Emission'), new_emission_path, class: "btn btn-primary" %>
+<% end %>

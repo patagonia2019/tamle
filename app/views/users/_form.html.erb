@@ -1,0 +1,57 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> <%=t("User_prohibited_saved")%>:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label t(:name) %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label t(:email)%>
+    <%= f.text_field :email, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label t(:address)%>
+    <%= f.text_field :address, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label t(:catastro)%>
+    <%= f.text_field :catastro, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label t(:phone)%>
+    <%= f.text_field :phone, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label t(:mobile)%>
+    <%= f.text_field :mobile, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label t(:password) %>
+    <%= f.password_field :password, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= f.label t(:password_confirmation) %>
+    <%= f.password_field :password_confirmation, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+  </div>
+<% end %>

@@ -1,0 +1,37 @@
+<%= form_for(medition) do |f| %>
+  <% if medition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(medition.errors.count, "error") %> <%= t"Medition" %>: <%= t"prohibited_saved" %> </h2>
+
+      <ul>
+      <% medition.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label t(:user_id) %>
+    <%= f.select :user_id, User.all.collect { |p| [ p.name, p.id ] }, include_blank: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label t(:at_date) %>
+    <%= f.date_select :at_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label t(:measure) %>
+    <%= f.number_field :measure %> m3
+  </div>
+
+  <div class="field">
+    <%= f.label t(:Billed) %>
+    <%= f.check_box :billed %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

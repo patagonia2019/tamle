@@ -1,0 +1,53 @@
+<%= form_for(consume) do |f| %>
+  <% if consume.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(consume.errors.count, "error") %> <%= t"Consume" %>: <%= t"prohibited_saved" %> </h2>
+
+      <ul>
+      <% consume.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label t(:at_date) %>
+    <%= f.date_select :at_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label t(:water_fix_consume_amount) %>
+    $ <%= f.text_field :water_fix_consume_amount %>
+  </div>
+
+  <div class="field">
+    <%= f.label t(:water_provision_amount) %>
+    $ <%= f.text_field :water_provision_amount %>
+  </div>
+
+  <div class="field">
+    <%= f.label t(:exceedance_m3) %>
+    <%= f.number_field :exceedance_m3 %> m3
+  </div>
+
+  <div class="field">
+    <%= f.label t(:exceedance_m3_amount) %>
+    $ <%= f.text_field :exceedance_m3_amount %>
+  </div>
+
+  <div class="field">
+    <%= f.label t(:social_quote_amount) %>
+    $ <%= f.text_field :social_quote_amount%>
+  </div>
+
+  <div class="field">
+    <%= f.label t(:number_of_members) %>
+    <%= f.number_field :number_of_members %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

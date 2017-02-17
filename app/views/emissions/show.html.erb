@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+    <%= render 'show_emission.erb' %>
+</div>
+
+<% if current_user.admin? %>
+  <%= link_to t('Edit'), edit_emission_path(@emission), class: "btn btn-success" %> |
+<% end %>
+<%= link_to t('Back'), emissions_path, class: "btn btn-default" %>

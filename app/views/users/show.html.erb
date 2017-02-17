@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<% provide(:title, @user.name) %>
+
+<p>
+  <%= gravatar_for @user %>
+</p>
+
+<p>
+  <strong><%=t("name")%>:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong><%=t("Email")%>:</strong>
+  <%= mail_to @user.email, @user.email, subject: t("About_Tamle"), :encode => :javascript %>
+</p>
+
+<p>
+  <strong><%=t("address")%>:</strong>
+  <%= @user.address %>
+</p>
+
+<p>
+  <strong><%=t("catastro")%>:</strong>
+  <%= @user.catastro %>
+</p>
+
+<p>
+  <strong><%=t("phone")%>:</strong>
+  <%= @user.phone %>
+</p>
+
+<p>
+  <strong><%=t("mobile")%>:</strong>
+  <%= @user.mobile %>
+</p>
+
+<% if current_user.admin? or current_user?(@user) %>
+  <%= link_to t('Edit'), edit_user_path(@user), class: "btn btn-success" %> |
+<% end %>
+<%= link_to t('Back'), users_path, class: "btn btn-default" %>

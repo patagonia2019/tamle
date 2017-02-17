@@ -1,0 +1,65 @@
+<%= form_for(transaction) do |f| %>
+  <% if transaction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(transaction.errors.count, "error") %> <%=t"Transactions_prohibited_saved"%>:</h2>
+
+      <ul>
+      <% transaction.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label t(:user_id) %>
+    <%= f.select :user_id, User.all.collect { |p| [ p.name, p.id ] }, include_blank: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label t(:at_date) %>
+    <%= f.date_select :at_date %>
+  </div>
+
+  <div class="field">
+    <%= f.label t(:concept) %>
+    <%= f.text_field :concept %>
+  </div>
+
+  <div class="field">
+    <%= f.label t(:amount) %>
+    $ <%= f.text_field :amount %>
+  </div>
+
+  <div class="field">
+    <%= f.label t(:is_credit) %>
+    <%= f.check_box :is_credit %>
+  </div>
+
+  <div class="field">
+    <%= f.label t(:Billed) %>
+    <%= f.check_box :billed %>
+  </div>
+
+  <span class="picture">
+    <%= f.file_field t(:picture), accept: 'image/jpeg,image/gif,image/png,application/pdf' %>
+    <% if transaction.picture? %>
+      <iframe src=<%= transaction.picture %> width="600" height="780" style="border: 1px;"> </iframe>
+    <% end %>
+  </span>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+  $('#transaction_picture').bind('change', function() {
+    var size_in_megabytes = this.files[0].size/1024/1024;
+    if (size_in_megabytes > 5) {
+      alert('Maximum file size is 5MB. Please choose a smaller file.');
+    }
+  });
+</script>
+

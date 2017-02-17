@@ -1,0 +1,1 @@
+json.partial! "meditions/medition", medition: @medition

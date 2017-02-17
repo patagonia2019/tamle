@@ -1,0 +1,6 @@
+<h1><%= t"Editing"%> <%="Emission" %></h1>
+
+<%= render 'form', emission: @emission %>
+
+<%= link_to t('Show'), @emission, class: "btn btn-info" %> |
+<%= link_to t('Back'), emissions_path, class: "btn btn-default" %>

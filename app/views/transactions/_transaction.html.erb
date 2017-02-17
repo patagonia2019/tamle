@@ -1,0 +1,23 @@
+<tr>
+  <td>
+    <% if transaction.billed %>
+      <div class="billed"/> 
+    <% else %>
+      <div class="not_billed"/> 
+    <% end %>
+  </td>
+
+  <td><%= User.find(transaction.user_id).name %></td>
+  <td><%= transaction.at_date %></td>
+  <td><%= transaction.concept %></td>
+  <td class="amount"><%= transaction.is_credit ? number_to_currency(transaction.amount, unit: "$", format:"%u %n", precision:0) : " " %>
+  <td class="amount"><%= transaction.is_credit ? " " : number_to_currency(transaction.amount, unit: "$", format:"%u %n", precision:0) %>
+  <td><%= image_tag("1478064320_editor-attachment-paper-clip.png", :alt => t('File')) if transaction.picture? %>
+
+  <td><%= link_to t('Show'), transaction, class: "btn btn-info" %></td>
+
+  <% if is_admin? %>
+     <td><%= link_to t('Edit'), edit_transaction_path(transaction), class: "btn btn-success" %></td>
+      <td><%= link_to t('Destroy'), transaction, class: "btn btn-danger", method: :delete, data: { confirm: t('Are_you_sure') } %></td>
+  <% end %>
+</tr>

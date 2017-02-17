@@ -1,0 +1,17 @@
+<% provide(:title, t('Edit') + t('User')) %>
+<% provide(:button_text, t('Save_changes')) %>
+
+<h1><%=t("Update_your_profile")%></h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= render 'form' %>
+    <div class="gravatar_edit">
+      <%= gravatar_for @user %>
+      <a href="http://gravatar.com/emails" target="_blank">Change</a>
+    </div>
+  </div>
+</div>
+
+<%= link_to t('Show'), @user, class: "btn btn-info" %> |
+<%= link_to t('Back'), users_path, class: "btn btn-default" %>

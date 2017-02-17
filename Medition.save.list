@@ -1,0 +1,370 @@
+t = Medition.create :user_id => 2, :at_date => '3-Aug-2014', :measure => 69
+t.save()
+t = Medition.create :user_id => 3, :at_date => '3-Aug-2014', :measure => 401
+t.save()
+t = Medition.create :user_id => 5, :at_date => '3-Aug-2014', :measure => 609
+t.save()
+t = Medition.create :user_id => 8, :at_date => '3-Aug-2014', :measure => 771
+t.save()
+t = Medition.create :user_id => 10, :at_date => '3-Aug-2014', :measure => 806
+t.save()
+t = Medition.create :user_id => 1, :at_date => '3-Aug-2014', :measure => 949
+t.save()
+t = Medition.create :user_id => 9, :at_date => '3-Aug-2014', :measure => 1132
+t.save()
+t = Medition.create :user_id => 2, :at_date => '4-Oct-2014', :measure => 69
+t.save()
+t = Medition.create :user_id => 3, :at_date => '4-Oct-2014', :measure => 410
+t.save()
+t = Medition.create :user_id => 5, :at_date => '4-Oct-2014', :measure => 621
+t.save()
+t = Medition.create :user_id => 8, :at_date => '4-Oct-2014', :measure => 796
+t.save()
+t = Medition.create :user_id => 10, :at_date => '4-Oct-2014', :measure => 841
+t.save()
+t = Medition.create :user_id => 1, :at_date => '4-Oct-2014', :measure => 973
+t.save()
+t = Medition.create :user_id => 9, :at_date => '4-Oct-2014', :measure => 1150
+t.save()
+t = Medition.create :user_id => 2, :at_date => '11-Nov-2014', :measure => 70
+t.save()
+t = Medition.create :user_id => 3, :at_date => '11-Nov-2014', :measure => 416
+t.save()
+t = Medition.create :user_id => 5, :at_date => '11-Nov-2014', :measure => 623
+t.save()
+t = Medition.create :user_id => 8, :at_date => '11-Nov-2014', :measure => 810
+t.save()
+t = Medition.create :user_id => 10, :at_date => '11-Nov-2014', :measure => 861
+t.save()
+t = Medition.create :user_id => 1, :at_date => '11-Nov-2014', :measure => 991
+t.save()
+t = Medition.create :user_id => 9, :at_date => '11-Nov-2014', :measure => 1160
+t.save()
+t = Medition.create :user_id => 2, :at_date => '13-Dec-2014', :measure => 71
+t.save()
+t = Medition.create :user_id => 3, :at_date => '13-Dec-2014', :measure => 428
+t.save()
+t = Medition.create :user_id => 5, :at_date => '13-Dec-2014', :measure => 630
+t.save()
+t = Medition.create :user_id => 8, :at_date => '13-Dec-2014', :measure => 826
+t.save()
+t = Medition.create :user_id => 10, :at_date => '13-Dec-2014', :measure => 882
+t.save()
+t = Medition.create :user_id => 1, :at_date => '13-Dec-2014', :measure => 1022
+t.save()
+t = Medition.create :user_id => 9, :at_date => '13-Dec-2014', :measure => 1177
+t.save()
+t = Medition.create :user_id => 2, :at_date => '12-Jan-2015', :measure => 71
+t.save()
+t = Medition.create :user_id => 3, :at_date => '12-Jan-2015', :measure => 437
+t.save()
+t = Medition.create :user_id => 5, :at_date => '12-Jan-2015', :measure => 636
+t.save()
+t = Medition.create :user_id => 8, :at_date => '12-Jan-2015', :measure => 849
+t.save()
+t = Medition.create :user_id => 10, :at_date => '12-Jan-2015', :measure => 904
+t.save()
+t = Medition.create :user_id => 1, :at_date => '12-Jan-2015', :measure => 1057
+t.save()
+t = Medition.create :user_id => 9, :at_date => '12-Jan-2015', :measure => 1209
+t.save()
+t = Medition.create :user_id => 2, :at_date => '6-Feb-2015', :measure => 71
+t.save()
+t = Medition.create :user_id => 3, :at_date => '6-Feb-2015', :measure => 442
+t.save()
+t = Medition.create :user_id => 5, :at_date => '6-Feb-2015', :measure => 642
+t.save()
+t = Medition.create :user_id => 8, :at_date => '6-Feb-2015', :measure => 904
+t.save()
+t = Medition.create :user_id => 10, :at_date => '6-Feb-2015', :measure => 919
+t.save()
+t = Medition.create :user_id => 1, :at_date => '6-Feb-2015', :measure => 1088
+t.save()
+t = Medition.create :user_id => 9, :at_date => '6-Feb-2015', :measure => 1238
+t.save()
+t = Medition.create :user_id => 2, :at_date => '12-Mar-2015', :measure => 71
+t.save()
+t = Medition.create :user_id => 3, :at_date => '12-Mar-2015', :measure => 450
+t.save()
+t = Medition.create :user_id => 5, :at_date => '12-Mar-2015', :measure => 649
+t.save()
+t = Medition.create :user_id => 8, :at_date => '12-Mar-2015', :measure => 922
+t.save()
+t = Medition.create :user_id => 10, :at_date => '12-Mar-2015', :measure => 940
+t.save()
+t = Medition.create :user_id => 1, :at_date => '12-Mar-2015', :measure => 1113
+t.save()
+t = Medition.create :user_id => 9, :at_date => '12-Mar-2015', :measure => 1271
+t.save()
+t = Medition.create :user_id => 2, :at_date => '13-Apr-2015', :measure => 71
+t.save()
+t = Medition.create :user_id => 3, :at_date => '13-Apr-2015', :measure => 455
+t.save()
+t = Medition.create :user_id => 5, :at_date => '13-Apr-2015', :measure => 652
+t.save()
+t = Medition.create :user_id => 8, :at_date => '13-Apr-2015', :measure => 941
+t.save()
+t = Medition.create :user_id => 10, :at_date => '13-Apr-2015', :measure => 955
+t.save()
+t = Medition.create :user_id => 1, :at_date => '13-Apr-2015', :measure => 1137
+t.save()
+t = Medition.create :user_id => 9, :at_date => '13-Apr-2015', :measure => 1284
+t.save()
+t = Medition.create :user_id => 2, :at_date => '10-May-2015', :measure => 71
+t.save()
+t = Medition.create :user_id => 3, :at_date => '10-May-2015', :measure => 458
+t.save()
+t = Medition.create :user_id => 5, :at_date => '10-May-2015', :measure => 654
+t.save()
+t = Medition.create :user_id => 8, :at_date => '10-May-2015', :measure => 947
+t.save()
+t = Medition.create :user_id => 10, :at_date => '10-May-2015', :measure => 967
+t.save()
+t = Medition.create :user_id => 1, :at_date => '10-May-2015', :measure => 1155
+t.save()
+t = Medition.create :user_id => 9, :at_date => '10-May-2015', :measure => 1292
+t.save()
+t = Medition.create :user_id => 2, :at_date => '13-Jun-2015', :measure => 71
+t.save()
+t = Medition.create :user_id => 3, :at_date => '13-Jun-2015', :measure => 462
+t.save()
+t = Medition.create :user_id => 5, :at_date => '13-Jun-2015', :measure => 657
+t.save()
+t = Medition.create :user_id => 8, :at_date => '13-Jun-2015', :measure => 953
+t.save()
+t = Medition.create :user_id => 10, :at_date => '13-Jun-2015', :measure => 981
+t.save()
+t = Medition.create :user_id => 1, :at_date => '13-Jun-2015', :measure => 1172
+t.save()
+t = Medition.create :user_id => 9, :at_date => '13-Jun-2015', :measure => 1301
+t.save()
+t = Medition.create :user_id => 2, :at_date => '12-Jul-2015', :measure => 71
+t.save()
+t = Medition.create :user_id => 3, :at_date => '12-Jul-2015', :measure => 465
+t.save()
+t = Medition.create :user_id => 5, :at_date => '12-Jul-2015', :measure => 659
+t.save()
+t = Medition.create :user_id => 8, :at_date => '12-Jul-2015', :measure => 958
+t.save()
+t = Medition.create :user_id => 10, :at_date => '12-Jul-2015', :measure => 994
+t.save()
+t = Medition.create :user_id => 1, :at_date => '12-Jul-2015', :measure => 1186
+t.save()
+t = Medition.create :user_id => 9, :at_date => '12-Jul-2015', :measure => 1307
+t.save()
+t = Medition.create :user_id => 2, :at_date => '8-Aug-2015', :measure => 71
+t.save()
+t = Medition.create :user_id => 3, :at_date => '8-Aug-2015', :measure => 467
+t.save()
+t = Medition.create :user_id => 5, :at_date => '8-Aug-2015', :measure => 661
+t.save()
+t = Medition.create :user_id => 8, :at_date => '8-Aug-2015', :measure => 965
+t.save()
+t = Medition.create :user_id => 10, :at_date => '8-Aug-2015', :measure => 1007
+t.save()
+t = Medition.create :user_id => 1, :at_date => '8-Aug-2015', :measure => 1199
+t.save()
+t = Medition.create :user_id => 9, :at_date => '8-Aug-2015', :measure => 1313
+t.save()
+t = Medition.create :user_id => 2, :at_date => '13-Oct-2015', :measure => 71
+t.save()
+t = Medition.create :user_id => 3, :at_date => '13-Oct-2015', :measure => 478
+t.save()
+t = Medition.create :user_id => 5, :at_date => '13-Oct-2015', :measure => 672
+t.save()
+t = Medition.create :user_id => 8, :at_date => '13-Oct-2015', :measure => 982
+t.save()
+t = Medition.create :user_id => 10, :at_date => '13-Oct-2015', :measure => 1038
+t.save()
+t = Medition.create :user_id => 1, :at_date => '13-Oct-2015', :measure => 1218
+t.save()
+t = Medition.create :user_id => 9, :at_date => '13-Oct-2015', :measure => 1326
+t.save()
+t = Medition.create :user_id => 2, :at_date => '10-Nov-2015', :measure => 71
+t.save()
+t = Medition.create :user_id => 3, :at_date => '10-Nov-2015', :measure => 485
+t.save()
+t = Medition.create :user_id => 5, :at_date => '10-Nov-2015', :measure => 676
+t.save()
+t = Medition.create :user_id => 8, :at_date => '10-Nov-2015', :measure => 992
+t.save()
+t = Medition.create :user_id => 10, :at_date => '10-Nov-2015', :measure => 1056
+t.save()
+t = Medition.create :user_id => 1, :at_date => '10-Nov-2015', :measure => 1230
+t.save()
+t = Medition.create :user_id => 9, :at_date => '10-Nov-2015', :measure => 1339
+t.save()
+t = Medition.create :user_id => 2, :at_date => '12-Dec-2015', :measure => 71
+t.save()
+t = Medition.create :user_id => 3, :at_date => '12-Dec-2015', :measure => 496
+t.save()
+t = Medition.create :user_id => 5, :at_date => '12-Dec-2015', :measure => 684
+t.save()
+t = Medition.create :user_id => 8, :at_date => '12-Dec-2015', :measure => 1005
+t.save()
+t = Medition.create :user_id => 10, :at_date => '12-Dec-2015', :measure => 1077
+t.save()
+t = Medition.create :user_id => 1, :at_date => '12-Dec-2015', :measure => 1283
+t.save()
+t = Medition.create :user_id => 9, :at_date => '12-Dec-2015', :measure => 1352
+t.save()
+t = Medition.create :user_id => 2, :at_date => '9-Jan-2016', :measure => 71
+t.save()
+t = Medition.create :user_id => 3, :at_date => '9-Jan-2016', :measure => 502
+t.save()
+t = Medition.create :user_id => 5, :at_date => '9-Jan-2016', :measure => 689
+t.save()
+t = Medition.create :user_id => 8, :at_date => '9-Jan-2016', :measure => 1032
+t.save()
+t = Medition.create :user_id => 10, :at_date => '9-Jan-2016', :measure => 1091
+t.save()
+t = Medition.create :user_id => 1, :at_date => '9-Jan-2016', :measure => 1341
+t.save()
+t = Medition.create :user_id => 0, :at_date => '9-Jan-2016', :measure => 6396
+t.save()
+t = Medition.create :user_id => 9, :at_date => '9-Jan-2016', :measure => 1372
+t.save()
+t = Medition.create :user_id => 2, :at_date => '13-Feb-2016', :measure => 73
+t.save()
+t = Medition.create :user_id => 3, :at_date => '13-Feb-2016', :measure => 509
+t.save()
+t = Medition.create :user_id => 5, :at_date => '13-Feb-2016', :measure => 696
+t.save()
+t = Medition.create :user_id => 8, :at_date => '13-Feb-2016', :measure => 1084
+t.save()
+t = Medition.create :user_id => 10, :at_date => '13-Feb-2016', :measure => 1114
+t.save()
+t = Medition.create :user_id => 1, :at_date => '13-Feb-2016', :measure => 1381
+t.save()
+t = Medition.create :user_id => 0, :at_date => '13-Feb-2016', :measure => 6546
+t.save()
+t = Medition.create :user_id => 9, :at_date => '13-Feb-2016', :measure => 1393
+t.save()
+t = Medition.create :user_id => 2, :at_date => '12-Mar-2016', :measure => 86
+t.save()
+t = Medition.create :user_id => 3, :at_date => '12-Mar-2016', :measure => 515
+t.save()
+t = Medition.create :user_id => 5, :at_date => '12-Mar-2016', :measure => 709
+t.save()
+t = Medition.create :user_id => 8, :at_date => '12-Mar-2016', :measure => 1111
+t.save()
+t = Medition.create :user_id => 10, :at_date => '12-Mar-2016', :measure => 1127
+t.save()
+t = Medition.create :user_id => 1, :at_date => '12-Mar-2016', :measure => 1390
+t.save()
+t = Medition.create :user_id => 9, :at_date => '12-Mar-2016', :measure => 1411
+t.save()
+t = Medition.create :user_id => 0, :at_date => '12-Mar-2016', :measure => 6640
+t.save()
+t = Medition.create :user_id => 2, :at_date => '10-Apr-2016', :measure => 94
+t.save()
+t = Medition.create :user_id => 3, :at_date => '10-Apr-2016', :measure => 529
+t.save()
+t = Medition.create :user_id => 5, :at_date => '10-Apr-2016', :measure => 704
+t.save()
+t = Medition.create :user_id => 8, :at_date => '10-Apr-2016', :measure => 1129
+t.save()
+t = Medition.create :user_id => 10, :at_date => '10-Apr-2016', :measure => 1140
+t.save()
+t = Medition.create :user_id => 1, :at_date => '10-Apr-2016', :measure => 1410
+t.save()
+t = Medition.create :user_id => 9, :at_date => '10-Apr-2016', :measure => 1433
+t.save()
+t = Medition.create :user_id => 0, :at_date => '10-Apr-2016', :measure => 6741
+t.save()
+t = Medition.create :user_id => 2, :at_date => '8-May-2016', :measure => 94
+t.save()
+t = Medition.create :user_id => 3, :at_date => '8-May-2016', :measure => 531
+t.save()
+t = Medition.create :user_id => 5, :at_date => '8-May-2016', :measure => 709
+t.save()
+t = Medition.create :user_id => 8, :at_date => '8-May-2016', :measure => 1145
+t.save()
+t = Medition.create :user_id => 10, :at_date => '8-May-2016', :measure => 1153
+t.save()
+t = Medition.create :user_id => 1, :at_date => '8-May-2016', :measure => 1425
+t.save()
+t = Medition.create :user_id => 9, :at_date => '8-May-2016', :measure => 1442
+t.save()
+t = Medition.create :user_id => 0, :at_date => '8-May-2016', :measure => 6811
+t.save()
+t = Medition.create :user_id => 2, :at_date => '13-Jun-2016', :measure => 94
+t.save()
+t = Medition.create :user_id => 3, :at_date => '13-Jun-2016', :measure => 543
+t.save()
+t = Medition.create :user_id => 5, :at_date => '13-Jun-2016', :measure => 714
+t.save()
+t = Medition.create :user_id => 8, :at_date => '13-Jun-2016', :measure => 1163
+t.save()
+t = Medition.create :user_id => 10, :at_date => '13-Jun-2016', :measure => 1170
+t.save()
+t = Medition.create :user_id => 1, :at_date => '13-Jun-2016', :measure => 1443
+t.save()
+t = Medition.create :user_id => 9, :at_date => '13-Jun-2016', :measure => 1453
+t.save()
+t = Medition.create :user_id => 0, :at_date => '13-Jun-2016', :measure => 6884
+t.save()
+t = Medition.create :user_id => 2, :at_date => '13-Jul-2016', :measure => 94
+t.save()
+t = Medition.create :user_id => 3, :at_date => '13-Jul-2016', :measure => 551
+t.save()
+t = Medition.create :user_id => 5, :at_date => '13-Jul-2016', :measure => 722
+t.save()
+t = Medition.create :user_id => 8, :at_date => '13-Jul-2016', :measure => 1175
+t.save()
+t = Medition.create :user_id => 10, :at_date => '13-Jul-2016', :measure => 1182
+t.save()
+t = Medition.create :user_id => 1, :at_date => '13-Jul-2016', :measure => 1458
+t.save()
+t = Medition.create :user_id => 9, :at_date => '13-Jul-2016', :measure => 1463
+t.save()
+t = Medition.create :user_id => 0, :at_date => '13-Jul-2016', :measure => 6951
+t.save()
+t = Medition.create :user_id => 2, :at_date => '14-Aug-2016', :measure => 94
+t.save()
+t = Medition.create :user_id => 3, :at_date => '14-Aug-2016', :measure => 557
+t.save()
+t = Medition.create :user_id => 5, :at_date => '14-Aug-2016', :measure => 729
+t.save()
+t = Medition.create :user_id => 8, :at_date => '14-Aug-2016', :measure => 1192
+t.save()
+t = Medition.create :user_id => 10, :at_date => '14-Aug-2016', :measure => 1193
+t.save()
+t = Medition.create :user_id => 9, :at_date => '14-Aug-2016', :measure => 1472
+t.save()
+t = Medition.create :user_id => 1, :at_date => '14-Aug-2016', :measure => 1475
+t.save()
+t = Medition.create :user_id => 0, :at_date => '14-Aug-2016', :measure => 7019
+t.save()
+t = Medition.create :user_id => 2, :at_date => '12-Sep-2016', :measure => 94
+t.save()
+t = Medition.create :user_id => 3, :at_date => '12-Sep-2016', :measure => 560
+t.save()
+t = Medition.create :user_id => 5, :at_date => '12-Sep-2016', :measure => 738
+t.save()
+t = Medition.create :user_id => 10, :at_date => '12-Sep-2016', :measure => 1196
+t.save()
+t = Medition.create :user_id => 8, :at_date => '12-Sep-2016', :measure => 1211
+t.save()
+t = Medition.create :user_id => 9, :at_date => '12-Sep-2016', :measure => 1480
+t.save()
+t = Medition.create :user_id => 1, :at_date => '12-Sep-2016', :measure => 1490
+t.save()
+t = Medition.create :user_id => 0, :at_date => '12-Sep-2016', :measure => 7076
+t.save()
+t = Medition.create :user_id => 2, :at_date => '14-Oct-2016', :measure => 94
+t.save()
+t = Medition.create :user_id => 3, :at_date => '14-Oct-2016', :measure => 565
+t.save()
+t = Medition.create :user_id => 5, :at_date => '14-Oct-2016', :measure => 745
+t.save()
+t = Medition.create :user_id => 10, :at_date => '14-Oct-2016', :measure => 1212
+t.save()
+t = Medition.create :user_id => 8, :at_date => '14-Oct-2016', :measure => 1228
+t.save()
+t = Medition.create :user_id => 9, :at_date => '14-Oct-2016', :measure => 1481
+t.save()
+t = Medition.create :user_id => 1, :at_date => '14-Oct-2016', :measure => 1507
+t.save()
+t = Medition.create :user_id => 0, :at_date => '14-Oct-2016', :measure => 7150
+t.save()

@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<% if @transaction.billed %>
+<div class="billed"> 
+  <p>
+  <strong><%=t("Billed")%></strong>
+  </p>
+</div> 
+<% else %>
+<div class="not_billed"> 
+  <p>
+  <strong><%=t("NotBilled")%></strong>
+  </p>
+</div> 
+<% end %>
+
+<p>
+  <strong><%=t("User")%>:</strong>
+  <%= @transaction.user_id %> (<%= User.find(@transaction.user_id).name %>)
+</p>
+
+<p>
+  <strong><%=t("at_date")%>:</strong>
+  <%= @transaction.at_date %>
+</p>
+
+<p>
+  <strong><%=t("concept")%>:</strong>
+  <%= @transaction.concept %>
+</p>
+
+<p>
+  <strong><%=t("amount")%>:</strong>
+  <%= number_to_currency(@transaction.is_credit ? @transaction.amount*1 : @transaction.amount*(-1), unit: "$", format:"%u %n", precision:2) %>
+</p>
+
+<p>
+  <strong><%=t("is_credit")%>:</strong>
+  <%= @transaction.is_credit %>
+</p>
+
+<p>
+  <% if @transaction.picture? %>
+    <span class="picture">
+      <iframe src=<%= @transaction.picture %> width="600" height="780" style="border: 1px;"> </iframe>
+    </span>
+  <% end %>
+</p>
+
+<%= link_to t('Edit'), edit_transaction_path(@transaction), class: "btn btn-success" %> |
+<%= link_to t('Back'), transactions_path, class: "btn btn-default" %>

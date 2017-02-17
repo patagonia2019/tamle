@@ -1,0 +1,22 @@
+<tr>
+  <td><%= l(invoice.billed_date, format:"%d-%b-%Y") if invoice.billed? %></td>
+  <td><%= l(invoice.at_date, format:"%b-%Y") %></td>
+  <td><%= l(invoice.at_date, format:"%d-%b") %> <br>
+      <%= meditionByDate(invoice.at_date).measure %> m3</td>
+  <td><%= l(meditionPrev(invoice.at_date).at_date, format:"%d-%b") %><br>
+      <%= meditionPrev(invoice.at_date).measure %> m3</td>
+  <td><%= meditionByDate(invoice.at_date).measure - meditionPrev(invoice.at_date).measure%> m3</td>
+  <td><%= transactionCurrentCebInvoiceAmountWithCurrency(invoice.at_date) %></td>
+  <td><%= transactionByDateAndUserInvoiceAmountWithCurrency(invoice.at_date, 22) %></td>
+
+  <% if is_admin? %>
+    <% if invoice.billed? %>
+      <td><%= link_to t('ShowBills'), emissions_url, class: "btn btn-default" %></td>
+    <% else %>
+      <td><%= link_to t('GenerateBill'), bill_path(invoice), method: :bill, class: "btn btn-primary" %></td>
+    <% end %>
+    <td><%= link_to t('Destroy'), invoice, class: "btn btn-danger", method: :delete, data: { confirm: t('Are_you_sure') } %></td>
+  <% end %>
+
+</tr>
+

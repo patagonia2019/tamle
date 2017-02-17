@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<% if @medition.billed %>
+<div class="billed"> 
+  <p>
+  <strong><%=t("Billed")%></strong>
+  </p>
+</div> 
+<% else %>
+<div class="not_billed"> 
+  <p>
+  <strong><%=t("NotBilled")%></strong>
+  </p>
+</div> 
+<% end %>
+
+<p>
+  <strong><%=t"User"%>:</strong>
+  <%= @medition.user_id %> (<%= User.find(@medition.user_id).name %>)
+</p>
+
+<p>
+  <strong><%=t"at_date"%>:</strong>
+  <%= @medition.at_date %>
+</p>
+
+<p>
+  <strong><%=t"measure"%>:</strong>
+  <%= @medition.measure %> m3
+</p>
+
+<%= link_to t('Edit'), edit_medition_path(@medition), class: "btn btn-success" %> |
+<%= link_to t('Back'), meditions_path, class: "btn btn-default" %>

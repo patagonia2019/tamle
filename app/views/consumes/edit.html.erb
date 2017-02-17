@@ -1,0 +1,6 @@
+<h1><%= t"Editing"%> <%=t"Consume" %></h1>
+
+<%= render 'form', consume: @consume %>
+
+<%= link_to t('Show'), @consume, class: "btn btn-info" %> |
+<%= link_to t('Back'), consumes_path, class: "btn btn-default" %>

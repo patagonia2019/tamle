@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>At emission date current:</strong>
+  <%= @invoice.at_date %>
+</p>
+
+<% if current_user.admin? %>
+  <%= link_to t('Edit'), edit_invoice_path(@invoice), class: "btn btn-success" %> |
+<% end %>
+<%= link_to t('Back'), invoices_path, class: "btn btn-default" %>

@@ -1,0 +1,43 @@
+<tr>
+  <td><%= l(emission.at_emission_date, format:'%b-%Y') %>
+  </td>
+  <td><%= User.find(Medition.find(emission.medition_id).user_id).name %>
+  </td>
+  <td> <%= emission.water_measure %> m3
+  </td>
+  <td class="amount" width="50%"><%= emission.water_consumed %> m3 <br>
+  </td>
+  <td class="amount" width="50%">
+      <% if emission.exceedance_m3_by_user > 0 %>
+      <b>
+        <%= emission.exceedance_m3_by_user %> m3 <br>
+        <%= number_to_currency(emission.exceedance_m3_amount_on_user, unit: "$", format:"%u %n", precision:0) %> <br>
+      </b>
+      <% else %>
+      -
+      <% end %>
+  </td>
+  <td><%= l(emission.balance_previous_date, format:'%b-%y') %><br>
+      <%= number_to_currency(emission.balance_previous_amount, unit: "$", format:"%u %n", precision:0) %>
+  </td>
+  <td>
+      <% if emission.payment_amount == 0 %>
+        -
+      <% else %>
+      <%= l(emission.payment_date, format:'%d-%b') %><br>
+      <%= number_to_currency(emission.payment_amount, unit: "$", format:"%u %n", precision:0) %>
+      <% end %>
+  </td>
+  <td class="amount"><b><%= number_to_currency(emission.balance_amount, unit: "$", format:"%u %n", precision:0) %></b>
+  </td>
+  <% if is_admin? %>
+      <td><%= link_to t('Show'), emission, class: "btn btn-primary" %>
+      </td>
+      <td><%= link_to t('Edit'), edit_emission_path(emission), class: "btn btn-success" %>
+      </td>
+
+<td><%= link_to t('Pdf'), showpdf_path(emission), method: :showpdf, class: "btn btn-primary" %></td> 
+      <td><%= link_to t('Destroy'), emission, class: "btn btn-danger", method: :delete, data: { confirm: t('Are_you_sure') } %>
+      </td>
+  <% end %>
+</tr>

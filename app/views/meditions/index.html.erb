@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= t("Meditions") %></h1>
+
+<%= collection_select(:medition, :user_id, User.where("id != 0 and id != 20").order("name"), :id, :name, options={:include_blank => t("All")}, {:class=>"user_select", :size=>12, :onchange => "document.location = '/meditions?user=' + this.value"})%>
+<table>
+<tr>
+<td>
+<% if is_admin? %>
+   <%= link_to t('New_Medition'), new_medition_path, class: "btn btn-primary" %>
+<% end %>
+</td>
+<td>
+<%= will_paginate @meditions %>
+</td>
+<table>
+
+<div class="tooltip">
+  tooltip
+  <span class="tooltiptext">Sort by user</span>
+</div>
+<table>
+  <thead>
+    <tr>
+      <th colspan="2"><%= sortable "user_id" %> </th>
+      <th><%= sortable "at_date" %></th>
+      <th><%= sortable "measure" %></th>
+      <% if is_admin? %>
+        <th colspan="2"></th>
+      <% else %>
+        <th colspan="1"></th>
+      <% end %>
+    </tr>
+  </thead>
+
+  <tbody>
+     <%= render @meditions %>
+  </tbody>
+<tr>
+<td colspan="6">
+<%= will_paginate %>
+</td>
+</table>
