@@ -26,6 +26,14 @@
     <%= f.label t(:Previous_medition) %>
     <%= f.select :previous_medition_id, Medition.all.collect { |p| [ "#{p.at_date} #{User.find(p.user_id).name}", p.id ] }, include_blank: true %>
   </div>
+  <div class="field">
+    <%= f.label t(:Measure) %>
+    <%= f.select :medition_id, Medition.all.collect { |p| [ "#{p.at_date} #{User.find(p.user_id).name}", p.id ] }, include_blank: true %>
+  </div>
+  <div class="field">
+    <%= f.label t(:Previous_medition) %>
+	<%= f.date_select :balance_previous_date %>
+  </div>
 
   <div class="field">
     <%= f.label t(:water_previous_measure) %>

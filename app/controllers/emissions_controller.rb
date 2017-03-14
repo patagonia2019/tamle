@@ -24,13 +24,17 @@ class EmissionsController < ApplicationController
       @pdf = WickedPdf.new.pdf_from_string(
            body_html,
            orientation: 'Portrait',
-           margin: { bottom: 10, top: 10 },
+           margin: { bottom: 0, top: 0, left:10, right:1 },
            encoding: 'utf8')
 
     save_path = Rails.root.join('pdfs','Factura '+@date+' '+@name+'.pdf')
     File.open(save_path, 'wb') do |file|
         file << @pdf
     end
+    send_data @pdf,
+	    :filename => save_path,
+	    :type => "application/pdf"
+
   end
 
   # GET /emissions/new
@@ -90,7 +94,7 @@ class EmissionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def emission_params
-      params.require(:emission).permit(:medition_id, :previous_medition_id, :at_emission_date, :consume_id, :water_previous_measure, :water_measure, :water_consumed, :exceedance_m3, :exceedance_amount, :ceb_date, :ceb_amount, :social_quote_amount, :balance_previous_amount, :balance_previous_date, :payment_amount, :payment_date, :balance_amount)
+      params.require(:emission).permit(:medition_id, :previous_medition_id, :at_emission_date, :consume_id, :water_previous_measure, :water_measure, :water_consumed, :exceedance_m3, :exceedance_amount, :ceb_date, :ceb_amount, :social_quote_amount, :balance_previous_amount, :balance_previous_date, :payment_amount, :payment_date, :balance_amount, :ceb_amount_by_user, :exceedance_m3_by_user, :exceedance_m3_amount_on_user, :water_fix_consume_amount, :water_fix_consume_on_user_amount, :water_provision_amount, :water_provision_on_user_amount, :invoice_id, :user_id, :sia_amount, :sia_date)
     end
 
     # Confirms a logged-in user.

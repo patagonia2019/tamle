@@ -46,6 +46,7 @@ module EmissionsHelper
         end
 
         water_consumed = medition.measure - prev_medition.measure
+        puts "water_consumed= #{water_consumed} = #{medition.measure} - #{prev_medition.measure}" 
         exceedance_m3_by_user = 0
         exceedance_m3_amount_on_user = 0
         if water_consumed > exceedance_m3
@@ -60,7 +61,7 @@ module EmissionsHelper
 
         prev_emission = emissionByDate(prev_medition.at_date, prev_medition.id)
         prev_balance_amount = prev_emission != nil ? prev_emission.balance_amount : 0
-        prev_emission_date = prev_emission != nil ? prev_emission.at_emission_date : nil
+        prev_emission_date = prev_emission != nil ? prev_emission.at_emission_date : prev_medition.at_date
         puts "prev_emission.balance_amount = #{prev_balance_amount}"
         puts "prev_emission_date = #{prev_emission_date}"
         puts "social_quote_amount = #{social_quote_amount}"

@@ -39,7 +39,7 @@ module MeditionsHelper
   end
 
   def meditionPrev(at_date, user_id = 22)
-    Medition.where(["at_date between ? and ? and user_id = ?", at_date.months_since(-1).beginning_of_month, at_date, user_id]).first
+    Medition.where(["at_date between ? and ? and user_id = ?", at_date.months_since(-1).beginning_of_month, at_date, user_id]).order("at_date asc").first
   end
 
   def meditionDates()

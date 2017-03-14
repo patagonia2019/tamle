@@ -17,7 +17,7 @@
       -
       <% end %>
   </td>
-  <td><%= l(emission.balance_previous_date, format:'%b-%y') %><br>
+  <td><%= l(emission.balance_previous_date, format:'%b-%y') if emission.balance_previous_date %><br>
       <%= number_to_currency(emission.balance_previous_amount, unit: "$", format:"%u %n", precision:0) %>
   </td>
   <td>
