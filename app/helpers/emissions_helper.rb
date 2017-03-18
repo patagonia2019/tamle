@@ -142,6 +142,35 @@ module EmissionsHelper
     Emission.where(["at_emission_date between ? and ? and medition_id = ?", at_date.months_since(-1).beginning_of_month, at_date, medition_id]).first
   end
 
+  def emissionPrintLastGroup()
+    at_date = invoiceLast().at_date
+    rows=""
+    Emission.where(["at_emission_date = ?", at_date]).each { |emission|
+        rows = rows + "<tr>"
+        rows = rows + "<td colspan=3 class='td-right'>#{User.find(Medition.find(emission.medition_id).user_id).name}</td>"
+        rows = rows + "<td width=30%><b>#{number_to_currency(emission.balance_amount, unit: "$", format:"%u %n", precision:0)}</b> </td>"
+        rows = rows + "</tr>"
+    }
+    rows.html_safe
+  end
 
-
+  def emissionPrintLastGroup2()
+    at_date = invoiceLast().at_date
+    rows="<tr>"
+    count = 1
+    Emission.where(["at_emission_date = ?", at_date]).order("balance_amount desc").each { |emission|
+        if (count > 4)
+            count = 0
+        end
+        @r = (count == 0)
+        if @r == true
+            rows = rows + (@r ? "</tr><tr>" : " ")
+        end
+        rows = rows + "<td>#{User.find(Medition.find(emission.medition_id).user_id).name}</td>"
+        rows = rows + "<td class='td-right'><b>#{number_to_currency(emission.balance_amount, unit: "$", format:"%u %n", precision:0)}</b> </td><td>|</td>"
+        count = count + 1
+    }
+    rows = rows + "</tr>"
+    rows.html_safe
+  end
 end

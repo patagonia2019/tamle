@@ -10,17 +10,14 @@
         <td class="td-right"></td>
     </tbody>
       <tr>
-        <th colspan="6"> <%= t('Transactions') %> </th>
+        <th colspan="6"> Saldos al <%= l(invoiceLast().at_date, format:'%d-%B-%Y') %> </th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td class="td-right"><%=t('credit')%> </td> <td width=30%> <b><%=transactionPagosSumWithCurrency()%> </b></td>
-        <td class="td-right"><%=t('debit')%> </td> <td width=30%> <b><%=transactionCobrosSumWithCurrency()%> </b></td>
-        <td class="td-right"><%=t('Balance')%> </td> <td width=30%> <b><%=transactionBalanceWithCurrency()%></td>
+        <td colspan=3 class="td-right"><b>General</b></td> <td width=30%> <b><%=transactionBalanceWithCurrency()%></td>
       </tr>
-      <tr>
-      </tr>
+        <%= emissionPrintLastGroup %>
     </tbody>
     <thead>
       <tr>

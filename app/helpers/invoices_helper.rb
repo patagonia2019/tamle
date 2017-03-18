@@ -27,4 +27,8 @@ module InvoicesHelper
     invoice.save()
     puts "invoice #{invoice.errors.full_messages}"
   end
+
+  def invoiceLast()
+    Invoice.select(:at_date).order("at_date desc").first
+  end
 end
