@@ -23,8 +23,8 @@ class EmissionsController < ApplicationController
       body_html   = render_to_string( partial: "emissions/show.pdf.erb" )
       @pdf = WickedPdf.new.pdf_from_string(
            body_html,
-           orientation: 'Portrait',
-           margin: { bottom: 0, top: 0, left:10, right:1 },
+           orientation: 'Landscape',
+           margin: { bottom: 0, top: 0, left:20, right:1 },
            encoding: 'utf8')
 
     save_path = Rails.root.join('pdfs','Factura '+@date+' '+@name+'.pdf')
