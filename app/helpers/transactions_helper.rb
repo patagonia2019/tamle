@@ -72,7 +72,7 @@ module TransactionsHelper
   end
 
   def transactionCurrentCebInvoiceAmountWithCurrency(at_date)
-    number_to_currency(transactionCurrentCebInvoiceAmount(at_date), unit: "$", format:"%u %n", precision:0)
+    number_to_currency(transactionCurrentCebInvoiceAmount(at_date), unit: "$", format:"%u %n", precision:2)
   end
 
   def transactionCurrentCebInvoiceAmount(at_date)

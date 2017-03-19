@@ -3,25 +3,32 @@
   <table>
     <thead>
       <tr>
-        <th colspan="6"> <%= full_title() %> Media Manzana 420 - (Rancho Grande) - Bariloche </th>
+        <th colspan="6"> <%= full_title() %> Media Manzana 420 - (Rancho Grande) - Bariloche - <%= l(Time.current.to_date, format:'%d-%B-%Y') %> </th>
       </tr>
+    </thead>
     <tbody>
       <tr>
         <td class="td-right"></td>
     </tbody>
+    <thead>
       <tr>
-        <th colspan="6"> Saldos al <%= l(invoiceLast().at_date, format:'%d-%B-%Y') %> </th>
+        <th colspan="6"> Saldo General al dia de hoy: <%= l(Time.current.to_date, format:'%d-%B-%Y') %> </th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td colspan=3 class="td-right"><b>General</b></td> <td width=30%> <b><%=transactionBalanceWithCurrency()%></td>
       </tr>
+    <thead>
+      <tr>
+        <th colspan="6"> Saldos de cada usuario al <%= l(invoiceLast().at_date, format:'%d-%B-%Y') %> </th>
+      </tr>
+    </thead>
         <%= emissionPrintLastGroup %>
     </tbody>
     <thead>
       <tr>
-        <th colspan="6"> <%= t('Water_consumption') %> </th>
+        <th colspan="6"> Consumo de Agua </th>
       </tr>
     </thead>
     <tbody>
@@ -43,12 +50,12 @@
     </tbody>
     <thead>
       <tr>
-        <th colspan="6"> <%= t('Invoices') %> </th>
+        <th colspan="6"> Facturas </th>
       </tr>
     </thead>
     <tbody>
       <tr>
-	      <td colspan="6" align=center> SIA - <%= t"Water" %> </td> 
+	      <td colspan="6" align=center> <b>SIA - <%= t"Water" %> </b></td> 
       </tr>
       <tr>
 	      <td colspan="2" class="td-right"> <%= t"at_date"%> </td> <td width=30%> <b> <%=transactionCurrentMonthYear()%> </b> </td> <td colspan="3" width=30%>  </td>
@@ -63,23 +70,26 @@
 	      <td colspan="2" class="td-right"> <%=t"Total"%> </td> <td colspan="3" width=30%> <b> <%= consumeTotalAmountWithCurrency() %> </b> </td>
       </tr>
       <tr>
-	      <td colspan="2" class="td-right"> <%=t"Rates_per_m3_excess"%> </td> <td colspan="3" width=30%> <b>  
-	<b>$8.6/m3.</b> <%=t"Increased_water_consumption"%> <%= consumeInfo().exceedance_m3 %> m3. (<%=consumeInfo().exceedance_m3%> m3 / <%= consumeInfo().number_of_members %> <%=t"users"%> = <%= consumeUserExceedance() %> m3)			
-</b> </td>
+	     <td colspan="2" width=30% class="td-right"> <%= t'Last_invoice' %> </td> <td colspan="3" width=30%> <b> <%= number_to_currency(transactionCurrent().amount, unit: "$", format:"%u %n", precision:2) %> </b> (<%= l(transactionCurrent().at_date, format:'%d-%B-%Y') %>) </td>
+      </tr>
+      <tr>
+	      <td colspan="2" class="td-right"> 
+                <%=t"Rates_per_m3_excess"%> 
+          </td> 
+          <td colspan="3" width=30%> 
+        <%= t"Rates_per_m3_excess"%>: <b><%= number_to_currency(consumeInfo().exceedance_m3_amount, unit: "$", format:"%u%n", precision:1)%>/m3</b> <br> <%=t"Increased_water_consumption"%> <%= consumeUserExceedance() %> m3. <br> (<%=consumeInfo().exceedance_m3%> m3 / <%= consumeInfo().number_of_members %> <%=t"users"%> = <%= consumeUserExceedance() %> m3)</b> 
+           </td>
       </tr>
 
 
       <tr>
-	      <td colspan="6" text-align=center> CEB - <%= t"Electricity" %> </td> 
+	      <td colspan="6" text-align=center> <b>CEB - <%= t"Electricity" %> </b></td> 
       </tr>
       <tr>
-	      <td colspan="2" class="td-right"> <%= t"at_date"%> </td> <td width=30%> <b> <%=transactionCebMonthYear(meditionCurrentDate()) %> </b> </td> <td colspan="3" width=30%>  </td>
+	     <td colspan="2" width=30% class="td-right"> <%= t'Last_invoice' %> </td> <td colspan="3" width=30%> <b> <%= transactionCurrentCebInvoiceAmountWithCurrency(meditionCurrentDate()) %> </b> (<%= l(transactionCurrentCebInvoice(meditionCurrentDate(), user_id = 20).at_date, format:'%d-%B-%Y')%>)</td>
       </tr>
       <tr>
-	     <td colspan="2" width=30% class="td-right"> <%= t'Last_invoice' %> </td> <td colspan="3" width=30%> <b> <%= transactionCurrentCebInvoiceAmountWithCurrency(meditionCurrentDate()) %> </b> </td>
-      </tr>
-      <tr>
-	      <td colspan="2" width=30%> <%=t"Social_Fee"%> (Media Manzana 420) </td> <td colspan="3" width=30%> <b> <%= consumeSocialQuoteWithCurrency() %> </b><td colspan="3" width=30%>  </td>
+	      <td colspan="2" width=30%> <b><%=t"Social_Fee"%> (Media Manzana 420) </b></td> <td colspan="3" width=30%> <b> <%= consumeSocialQuoteWithCurrency() %> </b><td colspan="3" width=30%>  </td>
       </tr>
     </tbody>
   </table>
