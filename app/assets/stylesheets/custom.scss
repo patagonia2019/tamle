@@ -9,6 +9,11 @@ body {
   padding-top: 60px;
 }
 
+.body2 {
+  padding-top: 10px;
+  font-size: 1.0em;
+}
+
 section {
   overflow: auto;
 }
@@ -152,7 +157,7 @@ table {
 th {
     background-color: #919191;
     color: white;
-    padding: 14px;
+    padding: 10px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }

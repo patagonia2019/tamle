@@ -145,7 +145,7 @@ module EmissionsHelper
   def emissionPrintLastGroup()
     at_date = invoiceLast().at_date
     rows=""
-    Emission.where(["at_emission_date = ?", at_date]).each { |emission|
+    Emission.where(["at_emission_date = ?", at_date]).order("balance_amount desc").each { |emission|
         rows = rows + "<tr>"
         rows = rows + "<td colspan=3 class='td-right'>#{User.find(Medition.find(emission.medition_id).user_id).name}</td>"
         rows = rows + "<td width=30%><b>#{number_to_currency(emission.balance_amount, unit: "$", format:"%u %n", precision:0)}</b> </td>"
