@@ -27,13 +27,14 @@ class EmissionsController < ApplicationController
            margin: { bottom: 0, top: 0, left:20, right:1 },
            encoding: 'utf8')
 
-    save_path = Rails.root.join('pdfs','Factura '+@date+' '+@name+'.pdf')
-    File.open(save_path, 'wb') do |file|
-        file << @pdf
-    end
-    send_data @pdf,
-	    :filename => save_path,
-	    :type => "application/pdf"
+        @filename='Factura '+@date+' '+@name+'.pdf'
+        save_path = Rails.root.join('pdfs',@filename)
+        File.open(save_path, 'wb') do |file|
+            file << @pdf
+        end
+        send_data @pdf,
+            :filename => @filename,
+            :type => "application/pdf"
 
   end
 

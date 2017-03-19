@@ -7,8 +7,8 @@
 <thead>
   <tr>
     <th width=50%> <b> <%=l(@emission.at_emission_date, format:"%B-%Y")%> </b></th>
-    <th class="td-right">Total Media<br>Manzana 420 </th> 
-    <th class="td-right" width=30%>Usuario:<br><%= User.find(Medition.find(@emission.medition_id).user_id).name %> </th> 
+    <th class="td-right">Total Media Manzana 420 </th> 
+    <th class="td-right" width=30%>Usuario: <%= User.find(Medition.find(@emission.medition_id).user_id).name %> </th> 
   </tr>
 </thead>
 </table>
@@ -166,10 +166,10 @@
   <% else %>
     <td width=60%> 
         <%= t"Rates_per_m3_excess"%> 
-        (<b><%= number_to_currency(@emission.exceedance_amount, unit: "$", format:"%u%n", precision:1)%>/m3</b>)<br> <%=t"Increased_water_consumption"%> <%= consumeUserExceedance() %> m3. <br>(<%=consumeInfo().exceedance_m3%> m3 / <%= consumeInfo().number_of_members %> <%=t"users"%> = <%= consumeUserExceedance() %> m3)</b> 
+        (<b><%= number_to_currency(@emission.exceedance_amount, unit: "$", format:"%u%n", precision:1)%>/m3</b>) / <%=t"Increased_water_consumption"%> <%= consumeUserExceedance() %> m3. (<%=consumeInfo().exceedance_m3%> m3 / <%= consumeInfo().number_of_members %> <%=t"users"%> = <%= consumeUserExceedance() %> m3)</b> 
 </td>
-     <td class="td-right"> Consumió <%= @emission.water_consumed %> m3. 
-     <td > <b> Excedente: <br></b> <%= @emission.water_consumed %> - <%= consumeUserExceedance()%> = 
+     <td class="td-right"> Consumió <%= @emission.water_consumed %> m3. </td>
+     <td > <b> Excedente: <br></b> <%= @emission.water_consumed %> - <%= consumeUserExceedance()%> = </td>
      <td class="td-right-big-red"> <b><%=@emission.exceedance_m3_by_user %> m3.</b>
   <% end %>
   </tr>
@@ -192,7 +192,7 @@
     <tbody>
 
   <tr>
-    <td width=10%> Saldo General: </td> 
+    <td width=20%> Saldo General: </td> 
     <td> <b> <%=transactionBalanceWithCurrency()%></b> </td>
   </tr>
       <tr>
