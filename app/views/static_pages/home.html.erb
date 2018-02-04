@@ -12,7 +12,7 @@
     </tbody>
     <thead>
       <tr>
-        <th colspan="6"> Saldo General al dia de hoy: <%= l(Time.current.to_date, format:'%d-%B-%Y') %> </th>
+        <th colspan="6"> Balance General al: <%= l(Time.current.to_date, format:'%d-%B-%Y') %> </th>
       </tr>
     </thead>
     <tbody>
@@ -21,7 +21,7 @@
       </tr>
     <thead>
       <tr>
-        <th colspan="6"> Saldos de cada usuario al <%= l(invoiceLast().at_date, format:'%d-%B-%Y') %> </th>
+        <th colspan="6"> Balance de cada usuario al: <%= l(Time.current.to_date, format:'%d-%B-%Y') %> </th>
       </tr>
     </thead>
         <%= emissionPrintLastGroup %>

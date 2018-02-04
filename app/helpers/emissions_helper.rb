@@ -143,12 +143,31 @@ module EmissionsHelper
   end
 
   def emissionPrintLastGroup()
-    at_date = invoiceLast().at_date
+    at_date = Time.current.to_date
+    at_emission_date = invoiceLast().at_date
     rows=""
-    Emission.where(["at_emission_date = ?", at_date]).order("balance_amount desc").each { |emission|
+    rows = rows + "<tr>"
+        rows = rows + "<td colspan=2 class='td-right'></td>"
+        rows = rows + "<td width=30%><u>Ultima Boleta (#{invoiceLast().at_date})</u> </td>"
+        rows = rows + "<td width=30%><u>Ultimo Pago</u> </td>"
+        rows = rows + "<td width=30%><u>Saldo</u> </td>"
+    rows = rows + "</tr>"
+    Emission.where(["at_emission_date = ?", at_emission_date]).order("balance_amount desc").each { |emission|
         rows = rows + "<tr>"
-        rows = rows + "<td colspan=3 class='td-right'>#{User.find(Medition.find(emission.medition_id).user_id).name}</td>"
-        rows = rows + "<td width=30%><b>#{number_to_currency(emission.balance_amount, unit: "$", format:"%u %n", precision:0)}</b> </td>"
+        rows = rows + "<td colspan=2 class='td-right'>#{User.find(Medition.find(emission.medition_id).user_id).name}</td>"
+        last_payment_transaction = transactionLastPayment(emission.user_id, at_date)
+        balance_amount = emission.balance_amount
+        rows = rows + "<td width=30%><b>#{number_to_currency(balance_amount, unit: "$", format:"%u %n", precision:0)}</b> </td>"
+	if last_payment_transaction != nil
+        	balance_amount -= last_payment_transaction.amount
+        	rows = rows + "<td width=30%><b>#{number_to_currency(last_payment_transaction.amount, unit: "$", format:"%u %n", precision:0)}</b> </td>"
+	else
+        	rows = rows + "<td width=30%><b>$ 0</b> </td>"
+	end
+	rows = rows + "<td width=30%><b>#{number_to_currency(balance_amount, unit: "$", format:"%u %n", precision:0)}</b> </td>"
+
+#	rows = rows + "<td>#{Medition.find(emission.medition_id).user_id}</td>"
+#	rows = rows + "<td>#{at_date}</td>"
         rows = rows + "</tr>"
     }
     rows.html_safe
@@ -156,6 +175,25 @@ module EmissionsHelper
 
   def emissionPrintLastGroup2()
     at_date = invoiceLast().at_date
+    rows="<tr>"
+    count = 1
+    Emission.where(["at_emission_date = ?", at_date]).order("balance_amount desc").each { |emission|
+        if (count > 4)
+            count = 0
+        end
+        @r = (count == 0)
+        if @r == true
+            rows = rows + (@r ? "</tr><tr>" : " ")
+        end
+        rows = rows + "<td>#{User.find(Medition.find(emission.medition_id).user_id).name}</td>"
+        rows = rows + "<td class='td-right'><b>#{number_to_currency(emission.balance_amount, unit: "$", format:"%u %n", precision:0)}</b> </td><td>|</td>"
+        count = count + 1
+    }
+    rows = rows + "</tr>"
+    rows.html_safe
+  end
+
+  def emissionPrintLastGroupByDate(at_date)
     rows="<tr>"
     count = 1
     Emission.where(["at_emission_date = ?", at_date]).order("balance_amount desc").each { |emission|

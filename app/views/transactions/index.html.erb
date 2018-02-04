@@ -2,13 +2,13 @@
 
   <h1><%=t'Transactions'%></h1>
 
-  <% if !params[:user] %>
+  <% if current_user.admin? %>
     <h3><%=t('credit')%>: <%=transactionPagosSumWithCurrency()%></h3>
     <h3><%=t('debit')%>: <%=transactionCobrosSumWithCurrency()%></h3>
     <h3><%=t('Balance')%>: <%=transactionBalanceWithCurrency()%></h3>
   <% end %>
 
-  <% if is_admin? %>
+   <% if current_user.admin? %>
     <% if !params[:user] %>
       <%= collection_select(:transaction, :user_id, User.where("id != 0").order("name"), :id, :name, options={ :selected => 0, :include_blank => t("All")}, {:class=>"user_select", :size=>12, 
                            :onchange => "if (this.value != 0) { document.location = '/transactions?user=' + this.value;} else { document.location = '/transactions'}" })%>

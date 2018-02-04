@@ -12,20 +12,24 @@ class ConsumesController < ApplicationController
   # GET /consumes/1
   # GET /consumes/1.json
   def show
+    admin_user
   end
 
   # GET /consumes/new
   def new
+    admin_user
     @consume = Consume.new
   end
 
   # GET /consumes/1/edit
   def edit
+    admin_user
   end
 
   # POST /consumes
   # POST /consumes.json
   def create
+    admin_user
     @consume = Consume.new(consume_params)
 
     respond_to do |format|
@@ -42,6 +46,7 @@ class ConsumesController < ApplicationController
   # PATCH/PUT /consumes/1
   # PATCH/PUT /consumes/1.json
   def update
+    admin_user
     respond_to do |format|
       if @consume.update(consume_params)
         format.html { redirect_to @consume, notice: 'Consume was successfully updated.' }
@@ -56,6 +61,7 @@ class ConsumesController < ApplicationController
   # DELETE /consumes/1
   # DELETE /consumes/1.json
   def destroy
+    admin_user
     @consume.destroy
     respond_to do |format|
       format.html { redirect_to consumes_url, notice: 'Consume was successfully destroyed.' }
@@ -78,9 +84,15 @@ class ConsumesController < ApplicationController
     # Confirms a logged-in user.
     def logged_in_user
       unless logged_in?
+        store_location
         flash[:danger] = "Please log in."
         redirect_to login_url
       end
+    end
+
+    # Confirms an admin user.
+    def admin_user
+      redirect_to(root_url) unless current_user.admin?
     end
 
 end

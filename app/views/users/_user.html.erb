@@ -1,11 +1,11 @@
 <tr>
-  <td><%= gravatar_for user, size: 40 %></td>
   <td><%= user.name %></td>
-  <td><%= mail_to user.email, user.email, subject: t("About_Tamle"), :encode => :javascript %> </td>
-  <td><%= user.address %> </td>
-  <td><%= user.catastro %> </td>
-  <td><%= user.phone %> <%= user.mobile %> </td>
-  <td><%= transactionCurrentDateByUser(user.id)%> <br> <%=transactionBalanceWithCurrency(user.id) %> </td>
+   <% if current_user.admin? %>
+  	<td><%= mail_to user.email, user.email, subject: t("About_Tamle"), :encode => :javascript %> </td>
+	  <td><%= user.address %> </td>
+	  <td><%= user.catastro %> </td>
+	  <td><%= user.phone %> <%= user.mobile %> </td>
+  <% end %>
   <% if current_user.admin? or current_user?(user) %>
      <td><%= link_to t('Edit'), edit_user_path(user), class: "btn btn-success" %></td>
   <% end %>

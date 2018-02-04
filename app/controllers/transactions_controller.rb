@@ -1,7 +1,6 @@
 class TransactionsController < ApplicationController
 
   helper_method :sort_column, :sort_direction
-  before_action :logged_in_user
   before_action :set_transaction, only: [:show, :edit, :update, :destroy]
 
   # GET /transactions
@@ -17,6 +16,7 @@ class TransactionsController < ApplicationController
   # GET /transactions/1
   # GET /transactions/1.json
   def show
+    admin_user
   end
 
   # GET /transactions/new
@@ -26,6 +26,7 @@ class TransactionsController < ApplicationController
 
   # GET /transactions/1/edit
   def edit
+    admin_user
   end
 
   # POST /transactions
@@ -81,10 +82,17 @@ class TransactionsController < ApplicationController
     # Confirms a logged-in user.
     def logged_in_user
       unless logged_in?
+        store_location
         flash[:danger] = "Please log in."
         redirect_to login_url
       end
     end
+
+    # Confirms an admin user.
+    def admin_user
+      redirect_to(root_url) unless current_user.admin?
+    end
+
 
     def sort_direction
       %w[asc desc].include?(params[:direction]) ? params[:direction] : "desc"

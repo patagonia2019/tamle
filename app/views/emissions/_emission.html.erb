@@ -30,14 +30,12 @@
   </td>
   <td class="amount"><b><%= number_to_currency(emission.balance_amount, unit: "$", format:"%u %n", precision:0) %></b>
   </td>
+      <td><%= link_to t('Show'), emission, class: "btn btn-primary" %> </td>
+	<td><%= link_to t('Pdf'), showpdf_path(emission), method: :showpdf, class: "btn btn-primary" %></td> 
   <% if is_admin? %>
-      <td><%= link_to t('Show'), emission, class: "btn btn-primary" %>
-      </td>
       <td><%= link_to t('Edit'), edit_emission_path(emission), class: "btn btn-success" %>
       </td>
 
-<td><%= link_to t('Pdf'), showpdf_path(emission), method: :showpdf, class: "btn btn-primary" %></td> 
-      <td><%= link_to t('Destroy'), emission, class: "btn btn-danger", method: :delete, data: { confirm: t('Are_you_sure') } %>
-      </td>
+      	<td><%= link_to t('Destroy'), emission, class: "btn btn-danger", method: :delete, data: { confirm: t('Are_you_sure') } %> </td>
   <% end %>
 </tr>

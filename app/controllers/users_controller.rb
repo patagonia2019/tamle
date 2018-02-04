@@ -5,17 +5,19 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.paginate(page: params[:page], :per_page => 10,)
+    @users = User.paginate(page: params[:page], :per_page => 20,)
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    admin_user
     #@user = User.find(params[:id])
   end
 
   # GET /users/new
   def new
+    admin_user
     @user = User.new
   end
 
@@ -27,6 +29,7 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
+    admin_user
     @user = User.new(user_params)
 
     if @user.save
@@ -47,6 +50,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
+    admin_or_correct_user
     respond_to do |format|
       if @user.update(user_params)
         format.html { redirect_to @user, notice: 'User was successfully updated.' }

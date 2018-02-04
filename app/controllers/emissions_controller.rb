@@ -1,7 +1,7 @@
 class EmissionsController < ApplicationController
   helper_method :sort_column, :sort_direction
-  before_action :logged_in_user
-  before_action :admin_user, only: [:show, :showpdf, :edit, :update, :destroy]
+  #before_action :logged_in_user,     only: [:show ]
+  #before_action :admin_user, only: [:show, :showpdf, :edit, :update, :destroy]
   before_action :set_emission, only: [:show, :showpdf, :edit, :update, :destroy]
 
   # GET /emissions
@@ -40,16 +40,19 @@ class EmissionsController < ApplicationController
 
   # GET /emissions/new
   def new
+	admin_user
     @emission = Emission.new
   end
 
   # GET /emissions/1/edit
   def edit
+	admin_user
   end
 
   # POST /emissions
   # POST /emissions.json
   def create
+	admin_user
     @emission = Emission.new(emission_params)
 
     respond_to do |format|
@@ -66,6 +69,7 @@ class EmissionsController < ApplicationController
   # PATCH/PUT /emissions/1
   # PATCH/PUT /emissions/1.json
   def update
+	admin_user
     respond_to do |format|
       if @emission.update(emission_params)
         format.html { redirect_to @emission, notice: 'Emission was successfully updated.' }
@@ -80,6 +84,7 @@ class EmissionsController < ApplicationController
   # DELETE /emissions/1
   # DELETE /emissions/1.json
   def destroy
+	admin_user
     @emission.destroy
     respond_to do |format|
       format.html { redirect_to emissions_url, notice: 'Emission was successfully destroyed.' }
@@ -101,6 +106,7 @@ class EmissionsController < ApplicationController
     # Confirms a logged-in user.
     def logged_in_user
       unless logged_in?
+        store_location
         flash[:danger] = "Please log in."
         redirect_to login_url
       end

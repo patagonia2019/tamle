@@ -1,57 +1,73 @@
 module TransactionsHelper
 
-  def transactionBalanceWithCurrency(user_id = nil)
+  def transactionBalanceWithCurrency(user_id = nil, at_date = nil)
       balance = 0
       if user_id == nil
-        balance = transactionBalance()
+        balance = transactionBalance(at_date)
       else
-        balance = transactionBalanceByUser(user_id)
+        balance = transactionBalanceByUser(user_id, at_date)
       end
       number_to_currency(balance, unit: "$", format:"%u %n", precision:2)
   end
 
-  def transactionPagosSumWithCurrency(user_id = nil)
+  def transactionPagosSumWithCurrency(user_id = nil, at_date = nil)
       amount = 0
       if user_id == nil
         amount = transactionPagosSum()
       else
-        amount = transactionPagosSumByUser(user_id)
+        amount = transactionPagosSumByUser(user_id, at_date)
       end
       number_to_currency(amount, unit: "$", format:"%u %n", precision:2)
   end
 
-  def transactionCobrosSumWithCurrency(user_id = nil)
+  def transactionCobrosSumWithCurrency(user_id = nil, at_date = nil)
       amount = 0
       if user_id == nil
         amount = transactionCobrosSum()
       else
-        amount = transactionCobrosSumByUser(user_id)
+        amount = transactionCobrosSumByUser(user_id, at_date)
       end
       number_to_currency(amount, unit: "$", format:"%u %n", precision:2)
   end
 
-  def transactionBalance()
-    transactionPagosSum() - transactionCobrosSum()
+  def transactionBalance(at_date)
+    transactionPagosSum(at_date) - transactionCobrosSum(at_date)
   end
 
-  def transactionBalanceByUser(user_id)
-    transactionPagosSumByUser(user_id) - transactionCobrosSumByUser(user_id)
+  def transactionBalanceByUser(user_id, at_date)
+    transactionPagosSumByUser(user_id, at_date) - transactionCobrosSumByUser(user_id, at_date)
   end
 
-  def transactionPagosSum()
-    Transaction.where(:is_credit => true).sum(:amount)
+  def transactionPagosSum(at_date = nil)
+    if at_date == nil
+    	Transaction.where(:is_credit => true).sum(:amount)
+    else
+    	Transaction.where(:is_credit => true).where(["at_date <= ?", at_date.end_of_day]).sum(:amount)
+    end
   end
 
-  def transactionCobrosSum()
-    Transaction.where(:is_credit => false).sum(:amount)
+  def transactionCobrosSum(at_date = nil)
+    if at_date == nil
+    	Transaction.where(:is_credit => false).sum(:amount)
+    else
+    	Transaction.where(:is_credit => false).where(["at_date <= ?", at_date.end_of_day]).sum(:amount)
+    end
   end
 
-  def transactionPagosSumByUser(user_id)
-    Transaction.where(:is_credit => true, :user_id => user_id).sum(:amount)
+  def transactionPagosSumByUser(user_id, at_date)
+    if at_date == nil
+   	Transaction.where(:is_credit => true, :user_id => user_id).sum(:amount)
+    else
+    	Transaction.where(:is_credit => true, :user_id => user_id).where(["at_date <= ?", at_date.end_of_day]).sum(:amount)
+    end
   end
 
-  def transactionCobrosSumByUser(user_id)
-    Transaction.where(:is_credit => false, :user_id => user_id).sum(:amount)
+  def transactionCobrosSumByUser(user_id, at_date)
+    if at_date == nil
+   	Transaction.where(:is_credit => false, :user_id => user_id).sum(:amount)
+    else
+    	Transaction.where(:is_credit => false, :user_id => user_id).where(["at_date <= ?", at_date.end_of_day]).sum(:amount)
+    end
   end
 
   def transactionCurrentMonthYear()
@@ -69,6 +85,14 @@ module TransactionsHelper
 
   def transactionByDateAndUserInvoice(at_date, user_id)
     Transaction.where(["at_date between ? and ? and user_id = ?", at_date.beginning_of_month, at_date.end_of_month, user_id]).first
+  end
+
+  def transactionUntilDateAndUserInvoice(at_date, user_id)
+    Transaction.where(["at_date <= ? and user_id = ?", at_date.end_of_day, user_id]).first
+  end
+
+  def transactionUntilDate(at_date)
+    Transaction.where(["at_date <= ?", at_date.end_of_day]).first
   end
 
   def transactionCurrentCebInvoiceAmountWithCurrency(at_date)
