@@ -8,7 +8,9 @@
     <h3><%=t('Balance')%>: <%=transactionBalanceWithCurrency()%></h3>
   <% end %>
 
-   <% if current_user.admin? %>
+<table>
+<tr>
+<td>
     <% if !params[:user] %>
       <%= collection_select(:transaction, :user_id, User.where("id != 0").order("name"), :id, :name, options={ :selected => 0, :include_blank => t("All")}, {:class=>"user_select", :size=>12, 
                            :onchange => "if (this.value != 0) { document.location = '/transactions?user=' + this.value;} else { document.location = '/transactions'}" })%>
@@ -16,12 +18,8 @@
       <%= collection_select(:transaction, :user_id, User.where("id != 0").order("name"), :id, :name, options={ :selected => params[:user], :include_blank => t("All")}, {:class=>"user_select", :size=>12, 
                            :onchange => "if (this.value != 0) { document.location = '/transactions?user=' + this.value;} else { document.location = '/transactions'}" })%>
     <% end %>
-  <% end %>
   
 
-<table>
-<tr>
-<td>
 <% if is_admin? %>
   <%= link_to t('New_Transaction'), new_transaction_path, class: "btn btn-primary"%>
 <% end %>
