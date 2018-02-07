@@ -13,10 +13,8 @@
         <li><%= link_to t("Meditions"),     meditions_url %></li>
         <% if is_admin? %>
            <li><%= link_to t("Invoices"),      invoices_url %></li>
-           <li><%= link_to t("Emissions"),     emissions_url %></li>
-        <% else %>
-           <li><%= link_to t("MyEmissions"),     emissions_url %></li>
         <% end %>
+        <li><%= link_to t("Emissions"),     emissions_url %></li>
         <li><%= link_to t("Consumes"),      consumes_url %></li>
         <li><%= link_to t("Settings"),      edit_user_path(current_user) %></li>
         <li><%= link_to t("Logout"),        logout_path, method: :delete %> </li>

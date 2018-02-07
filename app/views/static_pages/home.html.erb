@@ -70,7 +70,7 @@
 	      <td colspan="2" class="td-right"> <%=t"Total"%> </td> <td colspan="3" width=30%> <b> <%= consumeTotalAmountWithCurrency() %> </b> </td>
       </tr>
       <tr>
-	     <td colspan="2" width=30% class="td-right"> <%= t'Last_invoice' %> </td> <td colspan="3" width=30%> <b> <%= number_to_currency(transactionCurrent().amount, unit: "$", format:"%u %n", precision:2) %> </b> (<%= l(transactionCurrent().at_date, format:'%d-%B-%Y') %>) </td>
+	     <td colspan="2" width=30% class="td-right"> <%= t'Last_invoice' %> </td> <td colspan="3" width=30%> <b> <%= number_to_currency(transactionCurrent().amount, unit: "$", format:"%u %n", precision:2) %> </b> (Pagado el <%= l(transactionCurrent().at_date, format:'%d-%B-%Y') %>) </td>
       </tr>
       <tr>
 	      <td colspan="2" class="td-right"> 
@@ -86,7 +86,9 @@
 	      <td colspan="6" text-align=center> <b>CEB - <%= t"Electricity" %> </b></td> 
       </tr>
       <tr>
-	     <td colspan="2" width=30% class="td-right"> <%= t'Last_invoice' %> </td> <td colspan="3" width=30%> <b> <%= transactionCurrentCebInvoiceAmountWithCurrency(meditionCurrentDate()) %> </b> (<%= l(transactionCurrentCebInvoice(meditionCurrentDate(), user_id = 20).at_date, format:'%d-%B-%Y')%>)</td>
+	     <td colspan="2" width=30% class="td-right"> <%= t'Last_invoice' %> </td> <td colspan="3" width=30%> <b> <%= 
+number_to_currency(transactionCurrent(20).amount, unit: "$", format:"%u %n", precision:2)
+ %> </b> (Pagado el <%= l(transactionCurrent(20).at_date, format:'%d-%B-%Y')%>)</td>
       </tr>
       <tr>
 	      <td colspan="2" width=30%> <b><%=t"Social_Fee"%> (Media Manzana 420) </b></td> <td colspan="3" width=30%> <b> <%= consumeSocialQuoteWithCurrency() %> </b><td colspan="3" width=30%>  </td>
