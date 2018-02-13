@@ -64,3 +64,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 
+gem "paperclip", "~> 5.2.1"
+

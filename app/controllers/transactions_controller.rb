@@ -77,7 +77,7 @@ class TransactionsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def transaction_params
-      params.require(:transaction).permit(:user_id, :medition_id, :at_date, :concept, :amount, :is_credit, :billed, :picture)
+      params.require(:transaction).permit(:user_id, :medition_id, :at_date, :concept, :amount, :is_credit, :billed, :picture, :facturaoriginal)
     end
     # Confirms a logged-in user.
     def logged_in_user

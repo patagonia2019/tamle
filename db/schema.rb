@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170111123327) do
+ActiveRecord::Schema.define(version: 20180207115640) do
 
   create_table "consumes", force: :cascade do |t|
     t.date     "at_date"
@@ -96,12 +96,16 @@ ActiveRecord::Schema.define(version: 20170111123327) do
     t.string   "concept"
     t.decimal  "amount"
     t.boolean  "is_credit"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.string   "picture"
     t.integer  "medition_id"
     t.integer  "invoice_id"
     t.boolean  "billed"
+    t.string   "facturaoriginal_file_name"
+    t.string   "facturaoriginal_content_type"
+    t.integer  "facturaoriginal_file_size"
+    t.datetime "facturaoriginal_updated_at"
   end
 
   create_table "users", force: :cascade do |t|

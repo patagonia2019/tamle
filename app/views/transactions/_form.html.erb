@@ -41,12 +41,18 @@
     <%= f.check_box :billed %>
   </div>
 
+  <div class="field">
+    <%= f.label t(:Factura) %>
+    <%= f.file_field :facturaoriginal %>
+  </div>
+
   <span class="picture">
     <%= f.file_field t(:picture), accept: 'image/jpeg,image/gif,image/png,application/pdf' %>
     <% if transaction.picture? %>
       <iframe src=<%= transaction.picture %> width="600" height="780" style="border: 1px;"> </iframe>
     <% end %>
   </span>
+
 
 
   <div class="actions">
