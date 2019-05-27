@@ -17,12 +17,7 @@ gem 'fog',                     '1.38.0'
 
 
 # Use sqlite3 as the database for Active Record
-#gem 'sqlite3', '~> 1.3', '>= 1.3.6'
-#gem 'sqlite3', '1.4.1'
-#gem 'sqlite3', '~> 1.4.1'
 gem 'sqlite3', '1.3.13'
-#gem 'sqlite3'
-#gem 'sqlite'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
