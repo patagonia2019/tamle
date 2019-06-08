@@ -124,20 +124,20 @@
     <td width=50%> <%= t"Previous_reading"%> 
      (<b><%=l(@emission.balance_previous_date, format:"%d-%b-%Y") if @emission.balance_previous_date? %></b>)
     </td>  
-    <td class="td-right"> <b> <%=meditionPrev(meditionCurrentDate()).measure%> m3 </b> </td>
+    <td class="td-right"> <b> <%=meditionByDate(@emission.balance_previous_date).measure if @emission.balance_previous_date? %> m3 </b> </td>
     <td class="td-right" width=30%> <b> <%=@emission.water_previous_measure%> m3 </b> </td>
   </tr>
 
   <tr>
     <td width=50%> <%= t"Actual_reading"%> 
         (<b><%=l(@emission.at_emission_date, format:"%d-%b-%Y") if @emission.at_emission_date? %></b>) </td>  
-    <td class="td-right" > <b> <%=meditionByDate(meditionCurrentDate()).measure%> m3 </b> </td>
+    <td class="td-right" > <b> <%=meditionByDate(@emission.at_emission_date).measure if @emission.at_emission_date? %> m3 </b> </td>
     <td colspan=4 class="td-right" width=30%> <b> <%=@emission.water_measure%> m3 </b> </td>
   </tr>
 
   <tr>
     <td width=50%> <%= t"Total_consumption"%> </td>
-    <td class="td-right"><%= meditionByDate(meditionCurrentDate()).measure - meditionPrev(meditionCurrentDate()).measure %> m3 </b> </td> 
+    <td class="td-right"><%= (meditionByDate(@emission.at_emission_date).measure if @emission.at_emission_date?) - (meditionByDate(@emission.balance_previous_date).measure if @emission.balance_previous_date?) %> m3 </b> </td> 
     <td class="td-right" width=30%><%= @emission.water_consumed %> m3 </b> </td>                                                                    
   </tr>
 </tbody>

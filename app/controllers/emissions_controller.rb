@@ -24,6 +24,7 @@ class EmissionsController < ApplicationController
       @pdf = WickedPdf.new.pdf_from_string(
            body_html,
            orientation: 'Landscape',
+	   dpi: 900,
            margin: { bottom: 0, top: 0, left:20, right:1 },
            encoding: 'utf8')
 
