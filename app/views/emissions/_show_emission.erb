@@ -30,7 +30,7 @@
   <tr>
     <td width=50%> 
         SIA - <%= t('Water') %> <%= t"Fixed_consumption"%> /
-        <%=t'Periodo_liquidacion'%>: <b><%=transactionCebMonthYear(meditionCurrentDate())%></b> /
+        <%=t'Periodo_liquidacion'%>: <b><%=transactionCebMonthYear(@emission.sia_date)%></b> /
         <%=t'Paid'%>: <b><%=l(@emission.sia_date, format:"%d-%b-%Y") if @emission.sia_date %> 
         (<%= number_to_currency(@emission.sia_amount, unit: "$", format:"%u %n", precision:2) %>) </b>
     </td>
@@ -69,7 +69,7 @@
   <tr>
     <td width=50%> 
         CEB - <%=t'Electricity'%> /
-        <%=t'Periodo_liquidacion'%>: <b><%=transactionCebMonthYear(meditionCurrentDate())%></b> /
+        <%=t'Periodo_liquidacion'%>: <b><%=transactionCebMonthYear(@emission.sia_date)%></b> /
         <%=t'Paid'%>: <b><%=l(@emission.ceb_date, format:"%d-%b-%Y") %>
         (<%= number_to_currency(@emission.ceb_amount, unit: "$", format:"%u %n", precision:2) %>) </b>
 
@@ -137,7 +137,7 @@
 
   <tr>
     <td width=50%> <%= t"Total_consumption"%> </td>
-    <td class="td-right"><%= (meditionByDate(@emission.at_emission_date).measure if @emission.at_emission_date?) - (meditionByDate(@emission.balance_previous_date).measure if @emission.balance_previous_date?) %> m3 </b> </td> 
+    <td class="td-right"><%= (meditionByDate(@emission.at_emission_date).measure if @emission.at_emission_date?) - (meditionByDate(@emission.balance_previous_date).measure if @emission.balance_previous_date?) if @emission.at_emission_date and @emission.balance_previous_date? %> m3 </b> </td> 
     <td class="td-right" width=30%><%= @emission.water_consumed %> m3 </b> </td>                                                                    
   </tr>
 </tbody>
