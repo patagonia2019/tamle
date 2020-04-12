@@ -1,4 +1,5 @@
 module EmissionsHelper
+ 
   def emissionGenerateBillsByInvoice(invoice)
 
     begin

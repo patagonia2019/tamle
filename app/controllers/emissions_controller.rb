@@ -7,9 +7,20 @@ class EmissionsController < ApplicationController
   # GET /emissions
   # GET /emissions.json
   def index
-    consume = view_context.consumeInfo()
-    number_of_members = consume.number_of_members()
-    @emissions = Emission.all.paginate(page: params[:page], :per_page => number_of_members,).order(sort_column + ' ' + sort_direction)
+    if logged_in?
+	    consume = view_context.consumeInfo()
+	    number_of_members = consume.number_of_members()
+	    if current_user.admin?
+		@emissions = Emission.all.paginate(page: params[:page], :per_page => number_of_members,).order(sort_column + ' ' + sort_direction)
+	    else
+		#@emissions = Emission.byCurrentUser().paginate(page: params[:page],).order(sort_column + ' ' + sort_direction)
+		#@emissions = emissionsByCurrentUser.paginate(page: params[:page], :per_page => number_of_members,).order(sort_column + ' ' + sort_direction)
+		@emissions = Emission.where(user_id:current_user.id).paginate(page: params[:page], :per_page => number_of_members,).order(sort_column + ' ' + sort_direction)
+	    end
+    else
+        flash[:danger] = "Please log in."
+        redirect_to login_url
+    end
   end
 
   # GET /emissions/1

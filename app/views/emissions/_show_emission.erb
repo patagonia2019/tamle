@@ -196,7 +196,7 @@
 	    <td> <b> <%=transactionBalanceWithCurrency(nil, @emission.at_emission_date)%></b> </td>
 	  </tr>
       <tr>
-        <td colspan=2 width=100%>Se pueden consultar los saldos actualizados en <%=request.base_url%> </td>
+        <td colspan=2 width=100%>Se pueden consultar los saldos y boletas actualizados en <%=request.base_url%> usuario: <b><%=current_user.email%></b>.</td>
       </tr>
       <tr>
         <td colspan=2 width=100% class="small">Generación: <%= l(Time.current.to_date, format:'%d-%B-%Y') %> </td>
