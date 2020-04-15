@@ -151,7 +151,7 @@ module EmissionsHelper
         rows = rows + "<td colspan=2 class='td-right'></td>"
         rows = rows + "<td width=30%><u>Ultima Boleta (#{invoiceLast().at_date})</u> </td>"
         rows = rows + "<td width=30%><u>Ultimo Pago</u> </td>"
-        rows = rows + "<td width=30%><u>Saldo</u> </td>"
+        rows = rows + "<td width=30%><u>Deuda</u> </td>"
     rows = rows + "</tr>"
     Emission.where(["at_emission_date = ?", at_emission_date]).order("balance_amount desc").each { |emission|
         rows = rows + "<tr>"

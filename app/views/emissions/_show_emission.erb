@@ -84,8 +84,8 @@
 
   <tr>
     <td width=50%> 
-        <%= t('Balance_accumulated') %> 
-        (<b><%=l(@emission.balance_previous_date, format:"%d-%b-%y") if @emission.balance_previous_date? %></b>)
+        El día
+        <b><%=l(@emission.balance_previous_date, format:"%d-%b-%y") if @emission.balance_previous_date? %></b> Ud. debía pagar...
     </td>
     <td class="td-right"> 
     </td> 
@@ -96,8 +96,8 @@
 
   <% if @emission.payment_amount != 0 %> 
       <tr>
-          <td width=50%> <%= t('Payment_amount') %> 
-            (<b><%=l(@emission.payment_date, format:"%d-%b-%y") %> </b>)
+          <td width=50%> Ud. pagó el día
+            <b><%=l(@emission.payment_date, format:"%d-%b-%y") %> </b>
           </td> 
         <td class="td-right"> 
         </td> 
@@ -106,7 +106,7 @@
   <% end %>
 
   <tr>
-    <td class="td-big"> <%= t('balance_amount') %> </td> 
+    <td class="td-big"> Ud. debe pagar: </td> 
     <td colspan="2" class="td-right-big"> <b> <%= number_to_currency(@emission.balance_amount, unit: "$", format:"%u %n", precision:0) %> </b> </td>
   </tr>
   <tr>
@@ -179,7 +179,7 @@
 <table>
     <thead>
       <tr>
-        <th> Saldos al <%= l(@emission.at_emission_date, format:'%d-%B-%Y') %> </th>
+        <th> Montos a pagar por los vecinos al <%= l(@emission.at_emission_date, format:'%d-%B-%Y') %> </th>
       </tr>
     </thead>
 </table>
@@ -192,11 +192,10 @@
     <tbody>
 
 	  <tr>
-	    <td width=30%> Saldo General al <b><%=l(@emission.at_emission_date, format:'%d-%B-%Y')  %></b>: </td> 
-	    <td> <b> <%=transactionBalanceWithCurrency(nil, @emission.at_emission_date)%></b> </td>
+	    <td width=100%> Dinero disponible en caja <b><%=l(@emission.at_emission_date, format:'%d-%B-%Y')  %></b>: <b> <%=transactionBalanceWithCurrency(nil, @emission.at_emission_date)%></b> </td>
 	  </tr>
       <tr>
-        <td colspan=2 width=100%>Se pueden consultar los saldos y boletas actualizados en <%=request.base_url%> usuario: <b><%=current_user.email%></b>.</td>
+        <td colspan=2 width=100%>Puede consultar su deuda en <%=request.base_url%></td>
       </tr>
       <tr>
         <td colspan=2 width=100% class="small">Generación: <%= l(Time.current.to_date, format:'%d-%B-%Y') %> </td>
