@@ -34,9 +34,10 @@ class EmissionsController < ApplicationController
       body_html   = render_to_string( partial: "emissions/show.pdf.erb" )
       @pdf = WickedPdf.new.pdf_from_string(
            body_html,
-           orientation: 'Landscape',
-	   dpi: 900,
-           margin: { bottom: 0, top: 0, left:20, right:1 },
+           orientation: 'Portrait',
+	   page_size: 'A4',
+	   dpi: 400,
+           margin: { bottom: 0, top: 0, left:10, right:1 },
            encoding: 'utf8')
 
         @filename='Factura '+@date+' '+@name+'.pdf'
